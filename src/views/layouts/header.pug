@@ -1,0 +1,110 @@
+// HEADER 
+header.confort__header
+  .topline
+    .ctn
+      .topline__wraper
+        button.nav__toogle: span
+        a.brand(href=""): +icon('#logo', 'logo')
+        .navs
+          .lang
+            .dropdown
+              .dropdown__toggle(data-toggle="dropdown")
+                span.text Rom
+                +icon('#next', 'caret')
+              .dropdown__menu: ul
+                li: a(href="") Rus
+                li.current: a(href="") Rom
+                li: a(href="") Eng
+          nav.contacts: ul
+            li: a(href="")
+              +icon('#phone')
+              span.text +(373) 22 84 30 61
+            li: a(href="mailto:confortmarketing@gmail.com"): +icon('#email')
+            li: a(href="", target="_blank"): +icon('#facebook')
+            li: a(href="", target="_blank"): +icon('#instagram')
+          .sep
+          .search: form.search__form(action="")
+            input(type="text" placeholder="Căutare" name="query")
+            button(type="submit"): +icon('#search')
+            .lifesearch
+              h5 Căutări populare
+              ul
+                li: a(href="") Canapele
+                li: a(href="") Scaune și mese
+                li: a(href="") Canapele
+                li: a(href="") Scaune și mese
+                li: a(href="") Coltare
+          nav.buttons: ul
+            li: a.button(href=""): +icon('#star')
+            li: a.button(href=""): +icon('#cart')
+  .mainline
+    .ctn: .mainline__wraper
+      .search
+      nav: ul.mainmenu
+        li: a(href="" data-show="submenu") 
+          span.text CATALOG
+          +icon('#next', 'caret')
+        li: a(href="") OFERTE
+        li: a(href="") MOBILĂ ÎN CREDIT
+        li: a(href="") DESPRE NOI
+        li: a(href="") POSTURI VACANTE
+        li: a(href="") CONTACTE
+  .bottomline
+    .ctn: .bottomline__wraper
+      .bottomline__nav
+        ul
+          li: a(href="")
+            span.title Canapele
+            +icon('#next')
+          li: a(href="")
+            span.title Coltare
+            +icon('#next')
+          li: a(href="")
+            span.title Scaune și mese
+            +icon('#next')
+          li: a(href="")
+            span.title Paturi
+            +icon('#next')
+          li: a(href="")
+            span.title Mobila corp
+            +icon('#next')
+          li: a(href="")
+            span.title Seturi
+            +icon('#next')
+          li: a(href="")
+            span.title Canapele
+            +icon('#next')
+          li: a(href="")
+            span.title Coltare
+            +icon('#next')
+          li: a(href="")
+            span.title Scaune și mese
+            +icon('#next')
+          li: a(href="")
+            span.title Paturi
+            +icon('#next')
+        a.btn.white-link(href="") 
+          span.text toate produsele
+          +icon('#next')
+      .bottomline__carousel: .owl-carousel
+        .subcategory__image: img(src="tmp/cat_1.png", alt="")
+        .subcategory__image: img(src="tmp/cat_2.png", alt="")
+        .subcategory__image: img(src="tmp/cat_3.png", alt="")
+        .subcategory__image: img(src="tmp/cat_4.png", alt="")
+        .subcategory__image: img(src="tmp/cat_5.png", alt="")
+        .subcategory__image: img(src="tmp/cat_6.png", alt="")
+        .subcategory__image: img(src="tmp/cat_1.png", alt="")
+        .subcategory__image: img(src="tmp/cat_2.png", alt="")
+        .subcategory__image: img(src="tmp/cat_3.png", alt="")
+        .subcategory__image: img(src="tmp/cat_4.png", alt="")
+  .mobileline: .ctn: ul
+    li: a(href="") Canapele
+    li: a(href="") Coltare
+    li: a(href="") Scaune și mese
+    li: a(href="") Paturi
+    li: a(href="") Mobila corp
+    li: a(href="") Seturi
+    li: a(href="") Canapele
+    li: a(href="") Coltare
+    li: a(href="") Scaune și mese
+    li: a(href="") Paturi

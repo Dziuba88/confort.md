@@ -1,0 +1,19 @@
+// SETTINGS
+@import './lib/normalize';
+@import './lib/mixins';
+@import './lib/vars';
+
+// PLUGINS
+@import './plugins/aos';
+@import './plugins/carousel';
+
+// GLOBALS
+@import './lib/globals';
+@import './lib/grid';
+@import './lib/form';
+@import './lib/buttons';
+
+// MODELS
+@import './models/header';
+@import './models/footer';
+@import './models/sections';

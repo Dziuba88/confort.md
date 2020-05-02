@@ -1,0 +1,56 @@
+.btn {
+  user-select: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-align: center;
+  border: 0;
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+
+  .icon {
+    transform: translateX(-0.25em);
+    transition: transform 0.25s linear;
+    font-size: 14px;
+  }
+
+  .text {
+    padding-right: 0.25em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &:hover {
+    .icon {
+      transform: translateX(0);
+    }
+  }
+  &.link {
+    padding: 10px 0;
+    color: $th_blk;
+    &:hover {
+      color: rgba($th_blk, 0.5);
+    }
+  }
+  &.white-link {
+    padding: 10px 0;
+    color: $th_wht_1;
+    &:hover {
+      color: rgba($th_lht_2, 0.5);
+    }
+  }
+
+  &.white {
+    color: $th_drk_1;
+    background-color: $th_wht_1;
+
+    &:hover {
+      color: rgba($th_blk, 0.5);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mixin icon(ID, CLASS)
+  if(!CLASS)
+    svg.icon: use(xlink:href="assets/img/sprite.svg?"+ID)
+  else
+    svg(class=CLASS): use(xlink:href="assets/img/sprite.svg?"+ID)

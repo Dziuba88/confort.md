@@ -1,0 +1,54 @@
+extends layouts/layout
+block VARS
+  - var title = "Wellcome"
+block PAGE
+  .welcome__slider.owl-carousel
+    -for(i=1;i<=5;i++)
+      .slide(data-background="tmp/home_slide_" + i + ".jpg")
+        .ctn
+          .slide__action
+            .action__header
+              small Vânzare
+              span aniversară
+            .action__body
+              .action__title reduceri de produse
+              .action__value
+                small până la
+                span 50<sup>%</sup>
+            .action__footer: a(href="").btn.white
+              span.text catalogul de produse
+              +icon('#next')
+  .welcome__categories
+    .shadows
+    .ctn
+      .welcome__categories__header 
+        h2 Mobilier moldovenesc
+        p Confort.md este în fruntea designului și a producției de mobilă din Moldova.
+        a.btn.link(href="") 
+          span.text catalogul de produse
+          +icon('#next')
+      .welcome__categories__list: ul
+        li.item-1: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_1.png", alt="").image
+          span.title Canapele
+        li.item-2: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_2.png", alt="").image
+          span.title Coltare
+        li.item-3: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_3.png", alt="").image
+          span.title Scaune și mese
+        li.item-4: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_4.png", alt="").image
+          span.title Paturi
+        li.item-5: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_5.png", alt="").image
+          span.title Mobila corp
+        li.item-6: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_6.png", alt="").image
+          span.title Seturi
+      .welcome__categories__footer
+        a.btn.link(href="") 
+          span.text catalogul de produse
+          +icon('#next')
+  include models/showrooms
+  include models/newsfeed

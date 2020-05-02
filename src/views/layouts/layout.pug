@@ -1,0 +1,22 @@
+include mixins
+- var imgPath = "assets/img/"
+<!DOCTYPE html>
+block VARS
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title CONFORT :: #{title}
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,400&display=swap")
+    link(rel="stylesheet", href="assets/css/styles.min.css")
+  body
+    .preloader: img(src=imgPath+"preloader.svg", alt="")
+    include header
+    block PAGE
+
+
+    include footer
+    // SCRIPS 
+    script(src="assets/js/jquery.min.js")
+    script(src="assets/js/main.min.js")
+    script(src="assets/js/apps.min.js")

@@ -1,0 +1,260 @@
+.confort__footer {
+  background-color: rgba($th_blk, 0.9);
+  color: $th_lht_2;
+
+  &__copyrights {
+    background-color: $th_blk;
+    padding: 10px 0;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 500;
+
+    .row {
+      align-items: center;
+    }
+
+    .social__list ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding-left: 10px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $th_lht_2;
+      transition: 0.15s linear;
+
+      &:hover {
+        color: $th_wht_1;
+      }
+    }
+  }
+
+  &__navs {
+    padding: 40px 0;
+  }
+
+  &__nav {
+    padding: 20px 0;
+    h4 {
+      position: relative;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin: 0 0 20px;
+      padding-bottom: 5px;
+      user-select: none;
+      color: rgba($th_wht_1, 0.25);
+
+      &:after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: $th_1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      font-size: 12px;
+      line-height: 20px;
+      text-transform: uppercase;
+
+      li {
+        padding: 5px 0;
+
+        a {
+          display: block;
+          text-decoration: none;
+          color: $th_wht_1;
+
+          transition: 0.15s linear;
+
+          &:hover {
+            color: $th_lht_2;
+          }
+        }
+      }
+    }
+
+    @include tabletScreen {
+      &.catalog {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            width: 50%;
+          }
+        }
+      }
+    }
+    @include largeScreenUp {
+      &.catalog {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    padding: 20px 0;
+    color: $th_wht_1;
+
+    p {
+      margin: 10px 0;
+      font-size: 12px;
+      line-height: 1.2;
+      color: $th_lht_2;
+    }
+
+    .brand {
+      display: inline-block;
+      user-select: none;
+      color: rgba($th_wht_1, 0.25);
+      transition: 0.15s ease-in-out;
+
+      .logo {
+        display: block;
+        width: 186px;
+        height: 60px;
+      }
+
+      &:hover {
+        color: $th_wht_1;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          flex: none;
+        }
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      li {
+        padding: 5px 0;
+
+        a {
+          color: $th_wht_1;
+          transition: 0.15s linear;
+          text-decoration: none;
+
+          &:hover {
+            color: $th_lht_2;
+          }
+        }
+
+        .text {
+          display: block;
+          padding-left: 0.5em;
+        }
+      }
+
+      &.social__list {
+        padding-top: 10px;
+        li {
+          display: inline-block;
+          line-height: 1;
+          vertical-align: middle;
+          font-size: 24px;
+          margin-right: 10px;
+        }
+
+        @include mediumScreenUp {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include tabletScreenDown {
+    &__navs {
+      .col {
+        order: 2;
+
+        &.mbf {
+          order: 1;
+        }
+
+        &.mbl {
+          order: 3;
+        }
+      }
+    }
+
+    &__nav {
+      padding: 10px 0;
+    }
+
+    &__copyrights {
+      .social__list {
+        display: none;
+      }
+
+      .copyright span {
+        display: block;
+      }
+    }
+
+    &__contacts {
+      padding-top: 40px;
+    }
+  }
+
+  @include smallScreenDown {
+    &__navs {
+      padding: 20px 0 0;
+    }
+    &__nav {
+      h4 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      &.catalog {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+
+          li {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
