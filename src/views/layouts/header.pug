@@ -1,5 +1,8 @@
 // HEADER 
 header.confort__header
+  .searchline: .ctn
+    form(action=""): input(type="text" placeholder="Căutare" name="query")
+    div(data-close="search"): +icon('#close')
   .topline
     .ctn
       .topline__wraper
@@ -23,23 +26,12 @@ header.confort__header
             li: a(href="", target="_blank"): +icon('#facebook')
             li: a(href="", target="_blank"): +icon('#instagram')
           .sep
-          .search: form.search__form(action="")
-            input(type="text" placeholder="Căutare" name="query")
-            button(type="submit"): +icon('#search')
-            .lifesearch
-              h5 Căutări populare
-              ul
-                li: a(href="") Canapele
-                li: a(href="") Scaune și mese
-                li: a(href="") Canapele
-                li: a(href="") Scaune și mese
-                li: a(href="") Coltare
           nav.buttons: ul
+            li: a.button(href="" data-show="search"): +icon('#search')
             li: a.button(href=""): +icon('#star')
             li: a.button(href=""): +icon('#cart')
   .mainline
     .ctn: .mainline__wraper
-      .search
       nav: ul.mainmenu
         li: a(href="" data-show="submenu") 
           span.text CATALOG

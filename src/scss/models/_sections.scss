@@ -115,27 +115,6 @@
       }
     }
 
-    .owl-nav {
-      font-size: 24px;
-      .owl-prev,
-      .owl-next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-
-        &.disabled {
-          display: none;
-        }
-      }
-
-      .owl-prev {
-        left: -40px;
-      }
-      .owl-next {
-        right: -40px;
-      }
-    }
-
     @include extraScreen {
       .ctn {
         padding: 0 220px;
@@ -144,19 +123,14 @@
 
     @include tabletScreenDown {
       padding: 40px 0 20px;
-      .ctn {
-        padding: 0 60px;
-      }
     }
 
     @include smallScreenDown {
       .newsfeed__item {
         .intro {
           padding: 10px 0 0;
-          font-size: 12px;
-          line-height: 15px;
-          overflow: hidden;
-          height: 55px;
+          font-size: 14px;
+          line-height: 20px;
         }
       }
     }
@@ -168,7 +142,7 @@
 
   .slide {
     padding-top: 100px;
-    padding-bottom: 10%;
+    padding-bottom: 350px;
 
     .ctn {
       position: relative;
@@ -429,7 +403,7 @@
             padding: 5px 10px;
             position: absolute;
             z-index: 2;
-            background-color: rgba($th_blk, 0.65);
+            background-color: rgba($th_blk, 0.8);
             color: $th_wht_1;
             font-size: 18px;
             line-height: 24px;

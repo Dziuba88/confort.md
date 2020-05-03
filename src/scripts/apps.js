@@ -50,8 +50,6 @@ $(document).ready(function () {
       : (header.style.top = '-140px');
     prevScrollpos = currentScrollPos;
 
-    $('.search__form input').blur();
-
     if (window.matchMedia('screen and (max-width: 1000px)').matches) {
       $('.confort__header .mainline').fadeOut(250);
       $('.nav__toogle').removeClass('active');
@@ -93,40 +91,21 @@ $(document).ready(function () {
     $('.bottomline').fadeOut(250);
   });
 
-  $('.search__form input').focus(function () {
-    if (window.matchMedia('screen and (max-width: 1000px)').matches) {
-      return false;
-    }
-    $('.search__form .lifesearch').fadeIn(250);
-  });
-
-  $('.search__form input').blur(function () {
-    $('.search__form .lifesearch').fadeOut(250);
-  });
-
-  // SEARCH REPLACE
-  var $largeContainer = $('.topline__wraper .search');
-  var $smallContainer = $('.mainline__wraper .search');
-  var $search = $('.search__form');
-  function nodesReplace() {
-    if (window.matchMedia('screen and (max-width: 1000px)').matches) {
-      $search.appendTo($smallContainer);
-    } else if (window.matchMedia('screen and (min-width: 1001px)').matches) {
-      $search.appendTo($largeContainer);
-    }
-  }
-
-  $(window).resize(function () {
-    nodesReplace();
-  });
-
-  $(document).ready(function () {
-    nodesReplace();
-  });
-
   $('.nav__toogle').click(function () {
     $(this).toggleClass('active');
     $('.confort__header .mainline').fadeToggle(250);
+  });
+
+  $('[data-close=search]').click(function () {
+    $('.searchline').fadeOut(250);
+  });
+
+  $('[data-show=search]').click(function (e) {
+    e.preventDefault();
+    $('.searchline').fadeIn(250);
+    setTimeout(() => {
+      $('.searchline input').focus();
+    }, 250);
   });
 })();
 
@@ -153,27 +132,5 @@ $(document).ready(function () {
     autoplay: true,
     autoplayTimeout: 10000,
     autoplayHoverPause: true,
-  });
-
-  $('.newsfeed .owl-carousel').owlCarousel({
-    margin: 20,
-    responsiveClass: true,
-    dots: false,
-    navText,
-    mouseDrag: false,
-    responsive: {
-      0: {
-        items: 1,
-        nav: true,
-      },
-      480: {
-        items: 2,
-        nav: true,
-      },
-      768: {
-        items: 3,
-        nav: false,
-      },
-    },
   });
 })();

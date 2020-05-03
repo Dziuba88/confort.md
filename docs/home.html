@@ -11,6 +11,18 @@
     <div class="preloader"><img src="assets/img/preloader.svg" alt=""/></div>
     <!-- HEADER -->
     <header class="confort__header">
+      <div class="searchline">
+        <div class="ctn">
+          <form action="">
+            <input type="text" placeholder="Căutare" name="query"/>
+          </form>
+          <div data-close="search">
+            <svg class="icon">
+              <use xlink:href="assets/img/sprite.svg?#close"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
       <div class="topline">
         <div class="ctn">
           <div class="topline__wraper">
@@ -56,28 +68,12 @@
                 </ul>
               </nav>
               <div class="sep"></div>
-              <div class="search">
-                <form class="search__form" action="">
-                  <input type="text" placeholder="Căutare" name="query"/>
-                  <button type="submit">
-                    <svg class="icon">
-                      <use xlink:href="assets/img/sprite.svg?#search"></use>
-                    </svg>
-                  </button>
-                  <div class="lifesearch">
-                    <h5>Căutări populare</h5>
-                    <ul>
-                      <li><a href="">Canapele</a></li>
-                      <li><a href="">Scaune și mese</a></li>
-                      <li><a href="">Canapele</a></li>
-                      <li><a href="">Scaune și mese</a></li>
-                      <li><a href="">Coltare</a></li>
-                    </ul>
-                  </div>
-                </form>
-              </div>
               <nav class="buttons">
                 <ul>
+                  <li><a class="button" href="" data-show="search">
+                      <svg class="icon">
+                        <use xlink:href="assets/img/sprite.svg?#search"></use>
+                      </svg></a></li>
                   <li><a class="button" href="">
                       <svg class="icon">
                         <use xlink:href="assets/img/sprite.svg?#star"></use>
@@ -95,7 +91,6 @@
       <div class="mainline">
         <div class="ctn">
           <div class="mainline__wraper">
-            <div class="search"></div>
             <nav>
               <ul class="mainmenu">
                 <li><a href="" data-show="submenu"> <span class="text">CATALOG</span>
@@ -338,20 +333,26 @@
             </div>
           </div>
         </div>
-        <div class="owl-carousel">
-          <div class="newsfeed__item"><a class="item__header" href=""><img class="image" src="https://dummyimage.com/590x760/a572cd/eceff1" alt=""/><span class="title">Lorem ipsum dolor sit amet consectetur.</span></a>
-            <div class="intro">
-              <p>Ut enim ad min im veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row">
+          <div class="col md-4 sm-6">
+            <div class="newsfeed__item"><a class="item__header" href=""><img class="image" src="https://dummyimage.com/590x760/a572cd/eceff1" alt=""/><span class="title">Lorem ipsum dolor sit amet consectetur.</span></a>
+              <div class="intro">
+                <p>Ut enim ad min im veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
             </div>
           </div>
-          <div class="newsfeed__item"><a class="item__header" href=""><img class="image" src="https://dummyimage.com/760x590/21bda9/eceff1" alt=""/><span class="title">Lorem ipsum dolor sit amet consectetur.</span></a>
-            <div class="intro">
-              <p>Ut enim ad min im veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="col md-4 sm-6">
+            <div class="newsfeed__item"><a class="item__header" href=""><img class="image" src="https://dummyimage.com/760x590/21bda9/eceff1" alt=""/><span class="title">Lorem ipsum dolor sit amet consectetur.</span></a>
+              <div class="intro">
+                <p>Ut enim ad min im veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
             </div>
           </div>
-          <div class="newsfeed__item"><a class="item__header" href=""><img class="image" src="https://dummyimage.com/760x760/969be9/464646" alt=""/><span class="title">Lorem ipsum dolor sit amet consectetur.</span></a>
-            <div class="intro">
-              <p>Ut enim ad min im veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="col md-4 sm-6">
+            <div class="newsfeed__item"><a class="item__header" href=""><img class="image" src="https://dummyimage.com/760x760/969be9/464646" alt=""/><span class="title">Lorem ipsum dolor sit amet consectetur.</span></a>
+              <div class="intro">
+                <p>Ut enim ad min im veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
             </div>
           </div>
         </div>
