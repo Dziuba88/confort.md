@@ -54,6 +54,7 @@ $(document).ready(function () {
       $('.confort__header .mainline').fadeOut(250);
       $('.nav__toogle').removeClass('active');
     }
+    $('.searchline .lifesearch').fadeOut(250);
   };
 
   var subcategories = $('.bottomline__carousel .owl-carousel');
@@ -106,6 +107,12 @@ $(document).ready(function () {
     setTimeout(() => {
       $('.searchline input').focus();
     }, 250);
+  });
+  $('.searchline input').focus(function () {
+    $('.searchline .lifesearch').fadeIn(250);
+  });
+  $('.searchline input').blur(function () {
+    $('.searchline .lifesearch').fadeOut(250);
   });
 })();
 

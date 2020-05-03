@@ -441,8 +441,7 @@
     background-color: $th_blk;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
     z-index: 999;
     display: none;
 
@@ -452,7 +451,7 @@
     }
 
     input {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       bottom: 0;
@@ -463,11 +462,18 @@
       font-size: 48px;
       line-height: 50px;
       font-weight: 200;
-      padding: 0 50px 0 10px;
+      padding: 0 50px 0 0;
       margin: 0;
       box-shadow: none;
       width: 100%;
       z-index: 0;
+      height: 100px;
+
+      @include tabletScreenDown {
+        height: 90px;
+
+        font-size: 24px;
+      }
     }
     [data-close='search'] {
       position: absolute;
@@ -495,6 +501,63 @@
       &:hover {
         opacity: 1;
       }
+    }
+
+    .lifesearch {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: $th_wht_1;
+      padding: 20px 10px 10px;
+      color: $th_drk_2;
+      width: 100%;
+      display: none;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: $th_wht_1;
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        transform: rotate(45deg);
+      }
+
+      h5 {
+        font-size: 12px;
+        line-height: 1;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+        color: rgba($th_blk, 0.5);
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          padding: 5px 0;
+
+          a {
+            display: block;
+            font-size: 14px;
+            line-height: 20px;
+            color: $th_1;
+            text-decoration: none;
+
+            &:hover {
+              color: $th_blk;
+            }
+          }
+        }
+      }
+    }
+
+    @include tabletScreen {
+      top: 20px;
     }
   }
 
@@ -568,10 +631,6 @@
         }
       }
     }
-
-    .searchline {
-      top: 20px;
-    }
   }
 
   @include smallScreenDown {
@@ -619,15 +678,6 @@
         right: 0;
         left: auto;
         margin: 0;
-      }
-    }
-
-    .searchline {
-      top: 0px;
-      bottom: 30px;
-
-      input {
-        font-size: 24px;
       }
     }
   }
