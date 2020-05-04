@@ -1,0 +1,128 @@
+extends layouts/layout
+block VARS
+  - var title = "Vacancies"
+block PAGE
+  .page__intro.hr
+    img.page__intro__img(src="tmp/hr_bg.jpg", alt="")
+    .ctn
+      .breadcrumbs: ul
+        li: a(href="") Principala
+        li: span Vacancies
+      .page__intro__content: .row: .col.sm-8.md-6.lg-4
+        h1 Vacancies
+        p Contact our HR department or send your CV
+        p 
+          span.hr__contacts Tel: (022) 59-26-45
+          span.hr__contacts Email: hr.confort@mail.ru
+        p: a.btn.white__outline(href="mailto:hr.confort@mail.ru")
+          span.text send e-Mail
+          +icon('#next')
+  .section.vacancies: .ctn
+    .section__header
+      h2 we are looking for
+    .row: .col.lg-8.md-10
+      #positions.vacancies__list
+        .panel
+          .panel__heading: a(data-toggle='collapse' data-parent='#positions' href='#positionID-1')
+            span Seamstress, seamstress
+            +icon('#next')
+          #positionID-1.collapse.fade.in: .panel__body
+            p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-2')
+              span Maid
+              +icon('#next')
+          #positionID-2.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-3')
+              span Porter
+              +icon('#next')
+          #positionID-3.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-4')
+              span Electrofusion
+              +icon('#next')
+          #positionID-4.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-5')
+              span Metal cutter with scissors and presses
+              +icon('#next')
+          #positionID-5.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-6')
+              span Wooden finisher
+              +icon('#next')
+          #positionID-6.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-7')
+              span Machinist
+              +icon('#next')
+          #positionID-7.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-8')
+              span Carpenter
+              +icon('#next')
+          #positionID-8.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-9')
+              span Soft furniture assembler and upholsterer
+              +icon('#next')
+          #positionID-9.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-10')
+              span Accountant
+              +icon('#next')
+          #positionID-10.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-11')
+              span Food cashier
+              +icon('#next')
+          #positionID-11.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-12')
+              span Grinder
+              +icon('#next')
+          #positionID-12.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-13')
+              span Woodworking machine operator (special studies)
+              +icon('#next')
+          #positionID-13.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+        .panel
+          .panel__heading: a.collapsed(data-toggle='collapse' data-parent='#positions' href='#positionID-14')
+              span Brigadier, technologist in the sewing department
+              +icon('#next')
+          #positionID-14.collapse.fade: .panel__body
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam vel distinctio, tempore iure esse illo modi repellat cum obcaecati ipsam sint ducimus a inventore laborum repudiandae sapiente. Ipsam minima numquam quisquam est doloremque perspiciatis voluptatum, fugiat aut earum quaerat? Qui reprehenderit odio sint repudiandae adipisci quas nemo repellendus, cupiditate possimus? Maxime, error laboriosam, aperiam quas iure dolores pariatur numquam alias ab temporibus aspernatur sit maiores eius, blanditiis rem? Animi nobis possimus necessitatibus quaerat enim aspernatur doloremque! Labore, vitae natus architecto itaque molestias sunt illo animi, vero explicabo similique ullam ratione debitis fuga tenetur temporibus. Optio quaerat id, cumque dignissimos quis architecto perferendis neque qui officia praesentium voluptatem eius dolore non fugiat, illo dicta eos consectetur incidunt corrupti. Aliquam quam voluptatem eum dolor quidem, rerum cum velit itaque officia minus placeat et suscipit eos quisquam, omnis repudiandae soluta. Aspernatur soluta accusantium, reiciendis unde hic mollitia officia adipisci perferendis modi debitis.
+
+      .vacancies__footer
+        h4 Human Resources / Employment
+        p Tel: (022) 59-26-45
+        p Email: hr.confort@mail.ru
+        p: a.btn.dark__outline(href="mailto:hr.confort@mail.ru")
+          span.text send e-Mail
+          +icon('#next')
+
+
+
+
+
+
+
+
+
+
+

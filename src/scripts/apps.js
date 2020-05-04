@@ -127,6 +127,13 @@ $(document).ready(function () {
         return 0 + (elementHeight - scrollTop) / elementHeight;
       },
     });
+
+    $('.page__intro').css({
+      opacity: function () {
+        var elementHeight = $(this).height();
+        return 0 + (elementHeight - scrollTop) / elementHeight;
+      },
+    });
   });
 
   $('.welcome__slider').owlCarousel({

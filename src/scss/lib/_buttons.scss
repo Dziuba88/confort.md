@@ -53,4 +53,28 @@
       color: rgba($th_blk, 0.5);
     }
   }
+
+  &.white__outline {
+    color: $th_wht_1;
+    background-color: transparent;
+    border: 1px solid $th_wht_1;
+    padding: 9px 19px;
+
+    &:hover {
+      color: rgba($th_blk, 0.5);
+      background-color: $th_wht_1;
+    }
+  }
+
+  &.dark__outline {
+    color: $th_drk_1;
+    background-color: transparent;
+    border: 1px solid $th_drk_1;
+    padding: 9px 19px;
+
+    &:hover {
+      color: $th_wht_1;
+      background-color: $th_drk_1;
+    }
+  }
 }

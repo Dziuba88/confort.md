@@ -127,3 +127,30 @@ nav ul {
   padding: 0;
   list-style: none;
 }
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.fade {
+  opacity: 0;
+  transition: 0.15s ease-in-out;
+
+  &.in {
+    opacity: 1;
+  }
+}
+
+.collapse {
+  display: none;
+
+  &.in {
+    display: block;
+  }
+}
