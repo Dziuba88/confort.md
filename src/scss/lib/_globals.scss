@@ -3,14 +3,24 @@
   box-sizing: border-box;
 }
 
+html {
+  margin-right: 0 !important;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   font-size: 14px;
   line-height: 1.4286;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 100vh;
+  min-height: 100vh;
   background-color: $th_lht_1;
+  display: flex;
+  flex-direction: column;
+
+  .confort__page {
+    flex: 1;
+  }
 
   .preloader {
     position: fixed;

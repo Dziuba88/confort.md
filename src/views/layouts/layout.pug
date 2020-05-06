@@ -12,9 +12,8 @@ html(lang="en")
   body
     .preloader: img(src=imgPath+"preloader.svg", alt="")
     include header
-    block PAGE
-
-
+    main.confort__page
+      block PAGE
     include footer
     // SCRIPS 
     script(src="assets/js/jquery.min.js")

@@ -148,3 +148,96 @@ $(document).ready(function () {
     autoplayHoverPause: true,
   });
 })();
+
+// CREDIT MODAL
+(function () {
+  $('.partner .btn').magnificPopup({
+    type: 'inline',
+    fixedBgPos: true,
+    //fixedContentPos: true,
+    overflowY: 'scroll',
+  });
+})();
+
+// CONTACT PAGE
+(function () {
+  var setRegion = function (region) {
+    if (region == 'all') {
+      $('[data-region="all"]').addClass('active');
+      $('[data-contact]').fadeIn(250);
+    } else {
+      $('[data-contact]').each(function (index, element) {
+        if ($(element).data('contact') == region) {
+          $(element).fadeIn(250);
+        } else {
+          $(element).fadeOut(250);
+        }
+      });
+    }
+  };
+
+  if ($('.contacts__tabs .active').length) {
+    setRegion($('.contacts__tabs .active').data('region'));
+  } else {
+    setRegion('all');
+  }
+
+  $('[data-region]').click(function (e) {
+    if ($(this).hasClass('active')) {
+      return false;
+    }
+    $('[data-region]').removeClass('active');
+    $(this).addClass('active');
+    setRegion($(this).data('region'));
+  });
+
+  var createMap = function () {
+    var mapStyle = [
+      {
+        featureType: 'all',
+        elementType: 'all',
+        stylers: [{ 'saturation': -100 }, { 'lightness': -20 }],
+      },
+    ];
+
+    var mapContainer = document.querySelector('#map');
+
+    var map_location = [mapContainer.dataset.lat, mapContainer.dataset.lng];
+
+    if (mapContainer) {
+      var map = new google.maps.Map(mapContainer, {
+        zoom: parseInt(mapContainer.dataset.scale, 10),
+        center: new google.maps.LatLng(map_location[0], map_location[1]),
+        disableDefaultUI: true,
+        styles: mapStyle,
+      });
+
+      var map_marker = new google.maps.Marker({
+        position: new google.maps.LatLng(map_location[0], map_location[1]),
+        map: map,
+        icon: {
+          url: 'assets/img/marker.svg',
+          scaledSize: new google.maps.Size(48, 48),
+        },
+      });
+
+      window.addEventListener('resize', function () {
+        window.setTimeout(function () {
+          map.panTo(map_marker.getPosition());
+        }, 250);
+      });
+    }
+  };
+
+  $('[data-contact] .btn').magnificPopup({
+    type: 'inline',
+    fixedBgPos: true,
+    //fixedContentPos: true,
+    overflowY: 'scroll',
+    callbacks: {
+      open: function () {
+        createMap();
+      },
+    },
+  });
+})();

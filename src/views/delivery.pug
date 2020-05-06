@@ -1,0 +1,36 @@
+extends layouts/layout
+block VARS
+  - var title = "Delivery"
+block PAGE
+  .page__intro.delivery
+    img.page__intro__img(src="tmp/delivery_bg.jpg", alt="")
+    .ctn
+      .breadcrumbs: ul
+        li: a(href="") Principala
+        li: span Delivery
+      .page__intro__content: .row: .col.sm-8.md-6.lg-4
+        h1 Shipping & Delivery services
+  .article: .ctn
+    h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. (H2)
+    p Sed ligula quam, rutrum ut rutrum eu, mollis in velit. Mauris ipsum massa, aliquet nec mauris sit amet, lacinia commodo orci. Praesent consectetur sollicitudin erat nec volutpat. Maecenas eu tortor consequat, iaculis arcu non, volutpat nisl. Donec et lacinia mi, imperdiet dapibus arcu. Nunc convallis tincidunt justo eu condimentum. Nunc sit amet volutpat risus, a eleifend turpis. Pellentesque ex nisi, bibendum quis mollis et, pretium at nisl.
+    h3 Nullam porttitor, elit et dapibus lobortis, sapien odio imperdiet velit, a euismod metus ante a sem.  (H3)
+    p Fusce dignissim in ex vel dapibus. Ut maximus vulputate ante, et scelerisque nisl malesuada sed. Maecenas et venenatis magna. <a href=''>Nam ut varius risus</a>, nec lacinia odio. Ut mattis consectetur lobortis. Pellentesque a molestie lectus. Proin interdum augue quis mauris ultricies, quis mattis magna consectetur. <strong>Curabitur a imperdiet nisi.</strong> Nulla facilisi. Vestibulum aliquam imperdiet justo, a vestibulum ipsum sodales ac. <em>Etiam vel consequat tellus.</em> Morbi egestas metus porta, maximus leo vitae, posuere elit. Fusce congue purus ut orci ullamcorper ullamcorper.
+    h4 Nam efficitur leo nibh, eu ultrices ante consequat in. Proin in efficitur leo.  (H4)
+    p Praesent et libero eu mauris aliquet volutpat vitae a lectus. Sed odio mi, mollis id tortor sit amet, rhoncus porta mi. Donec finibus suscipit diam, eget ornare metus ultrices dapibus. Mauris at luctus purus, ac feugiat sapien. Quisque at nisi eros. Mauris a nisl arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet mi tempor, fringilla mauris eu, dictum felis. Integer a ultrices urna, in commodo metus. Maecenas dignissim libero nulla, et interdum urna aliquet nec. Ut ultrices venenatis bibendum. Sed dignissim nunc sapien, vel gravida elit bibendum non. In vel volutpat nunc. Pellentesque sit amet augue vitae nibh auctor iaculis a in arcu.
+    h5 Nam egestas risus ut mi dictum, a tristique ligula venenatis.  (H5)
+    p Proin vulputate dictum bibendum. Aenean suscipit est quis nisi cursus rhoncus. Nulla facilisi. Etiam a sollicitudin tellus. Duis tristique imperdiet purus ut facilisis. Praesent vel nisi et arcu facilisis faucibus. Sed eget justo sagittis, blandit velit nec, laoreet nisl. Praesent vitae pellentesque sem. Proin feugiat risus non quam ultricies lobortis.
+    h6 Pellentesque quis velit ut justo tristique porttitor. (H6)
+    ul
+      li Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.
+      li Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.
+      li Proin tincidunt nisl augue, at sodales massa tincidunt a.
+      li Sed at neque quis ante laoreet mattis. Aliquam erat volutpat.
+      li Fusce finibus lectus vitae lectus gravida rhoncus.
+      li Quisque id ex erat.
+    p Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit. Donec aliquet et tellus sed tempus. Nullam posuere bibendum quam. Proin placerat tincidunt lacinia. Suspendisse Suspendisse suscipit feugiat augue. Donec accumsan finibus commodo. Aenean feugiat risus ante, at sodales est ultricies id.
+    ol
+      li Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.
+      li Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.
+      li Proin tincidunt nisl augue, at sodales massa tincidunt a.
+    p Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit.
+  include models/showrooms

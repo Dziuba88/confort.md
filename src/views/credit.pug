@@ -1,0 +1,87 @@
+extends layouts/layout
+block VARS
+  - var title = "Credit"
+block PAGE
+  .page__intro.credit
+    img.page__intro__img(src="tmp/credit_bg.jpg", alt="")
+    .ctn
+      .breadcrumbs: ul
+        li: a(href="") Principala
+        li: span Credit
+      .page__intro__content: .row: .col.sm-8.md-6.lg-4
+        h1 Furniture in credit
+        p Offers the opportunity to buy furniture in credit
+  .section.credit__partners: .ctn
+    .section__header: h2 CREDIT PARTNERS
+    .row: .col.lg-10: .row
+      .col.sm-6.md-4: .partner(data-aos="zoom-in-up")
+        img(src=imgPath+"credit_1.jpg", alt="")
+        a(href="#partner_modal").btn.dark__outline 
+          span.text credit details
+          +icon('#next')
+      .col.sm-6.md-4: .partner(data-aos="zoom-in-up")
+        img(src=imgPath+"credit_2.jpg", alt="")
+        a(href="#partner_modal").btn.dark__outline 
+          span.text credit details
+          +icon('#next')
+      .col.sm-6.md-4: .partner(data-aos="zoom-in-up")
+        img(src=imgPath+"credit_3.jpg", alt="")
+        a(href="#partner_modal").btn.dark__outline 
+          span.text credit details
+          +icon('#next')
+      .col.sm-6.md-4: .partner(data-aos="zoom-in-up")
+        img(src=imgPath+"credit_4.jpg", alt="")
+        a(href="#partner_modal").btn.dark__outline 
+          span.text credit details
+          +icon('#next')
+      .col.sm-6.md-4: .partner(data-aos="zoom-in-up")
+        img(src=imgPath+"credit_5.jpg", alt="")
+        a(href="#partner_modal").btn.dark__outline 
+          span.text credit details
+          +icon('#next')
+    #partner_modal.modal.credit.mfp-hide
+      .modal__close: +icon('#close')
+      .modal__header
+        .partner__img: img(src=imgPath+"credit_1.jpg", alt="")
+        h2 Conditions for granting credits
+      .modal__body
+        .row
+          .col.sm-6
+            ul.partner__conditions
+              li
+                +icon('#checked')
+                .text
+                  .title Amount granted
+                  .param 1 000 – 35 000 MDL
+              li
+                +icon('#checked')
+                .text
+                  .title Credit duration
+                  .param 6, 12 , 18 months
+              li
+                +icon('#checked')
+                .text
+                  .title Overpayment
+                  .param 6 months – 13%
+                  .param 12 months – 24%
+                  .param 18 months – 36%
+          .col.sm-6
+            ul.partner__conditions
+              li
+                +icon('#checked')
+                .text
+                  .title The client is officially employed for at least 1 month
+              li
+                +icon('#checked')
+                .text
+                  .title Granting credits, including to those who do not work officially and to pensioners.
+              li
+                +icon('#checked')
+                .text
+                  .title Required documents
+                  .param Bulletin (with accompanying data sheet)
+      .modal__footer: a(href="", target="_blank").btn.dark__outline
+        span.text visit site
+        +icon('#next')
+
+  include models/showrooms

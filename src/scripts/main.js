@@ -4,3 +4,4 @@
 // @prepros-prepend lib/collapse.js
 // @prepros-prepend lib/tab.js
 // @prepros-prepend lib/carousel.js
+// @prepros-prepend lib/popup.js

@@ -1,0 +1,198 @@
+extends layouts/layout
+block VARS
+  - var title = "Contacts"
+block PAGE
+  .page__intro.contacts
+    img.page__intro__img(src="tmp/contacts_bg.jpg", alt="")
+    .ctn
+      .breadcrumbs: ul
+        li: a(href="") Principala
+        li: span Contacts
+      .page__intro__content: .row: .col.sm-8.md-6.lg-4
+        h1 Găsiți un showroom confort
+        p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .contacts__main: .row: .col.xl-10
+        .row
+          .col.sm-6.md-3
+            .item
+              h4 Adress
+              p Republic of Moldova, MD 2069<br>Chisinau, str.Mesager, 19
+            .item
+              h4 Transport
+              p Maxi-taxi №108 <small>(terminus station, direction Sculeni)</small>
+          .col.sm-6.md-3
+            .item
+              h4 Waiting room
+              p Tel: (+373) 22 74-18-36;
+              p Fax: (+373) 22 74-76-14
+            .item
+              h4 Salon-shop
+              p Tel: (+373) 22 84-30-61
+              p Tel: (+373) 68 733-733
+          .col.sm-6.md-3
+            .item
+              h4 Human Resources / Employment
+              p Tel: (+373) 22 59-26-45
+            .item
+              h4 Repair Section
+              p Tel: (+373) 22 84-30-59
+          .col.sm-6.md-3
+            .item
+              h4 Work program
+              dl.schedule
+                dt Monday-Friday
+                dd 08:00-19:00
+                dt Saturday
+                dd 08:00-17:00
+                dt Sunday
+                dd 09:00-15:00
+  .contacts__list: .ctn: .row: .col.xl-10
+    .contacts__tabs: ul
+      li(data-region="all"): span All
+      li(data-region="md"): span Moldova
+      li(data-region="ro"): span Romania
+      li(data-region="ua"): span Ucraina
+      li(data-region="ru"): span Rusia
+      li(data-region="kz"): span Kazahstan
+    .contacts__items
+      .item(data-contact="md")
+        .item__header
+          h4 Chisinau
+            small Buiucani
+        .item__region: span md
+        .item__address: p MD 2069, Chișinau, str.Mesager, 19
+        .item__contacts
+          h5 Waiting room
+          p: a(href="tel:+") (+373) 22 74-18-36
+          h5 Salon-magazin
+          p: a(href="tel:+") (+373) 22 84-30-61
+        .item__link: a.btn.dark__outline(href="#contact_modal")
+          span.text view details
+          +icon('#next')
+      .item(data-contact="md")
+        .item__header
+          h4 Chisinau
+            small Creator Mall
+        .item__region: span md
+        .item__address: p str. Calea Ieșilor, 91, city.Chisinau
+        .item__contacts
+          h5 Telephone
+          p: a(href="tel:+") (+373)  60 20-02-28
+        .item__link: a.btn.dark__outline(href="#contact_modal")
+          span.text view details
+          +icon('#next')
+      .item(data-contact="ro")
+        .item__header
+          h4 Bucharest
+            small Home & Design Mall
+        .item__region: span ro
+        .item__address: p Ghencea Boulevard 126-132 Section 6, Bucharest, Romania J40/11904/1998, RO11285388 „Confort” bt. № 69-70
+        .item__contacts
+          h5 Telephone
+          p: a(href="tel:+") (+40) 736 336 284
+        .item__link: a.btn.dark__outline(href="#contact_modal")
+          span.text view details
+          +icon('#next')
+      .item(data-contact="ro")
+        .item__header
+          h4 Iasi
+            small Furniture store “Confort”
+        .item__region: span ro
+        .item__address: p mun. Iasi, b-dul. Nicolae Iorga 12a, Iasi county
+        .item__contacts
+          h5 Telephone
+          p (+40) 754 223 024
+        .item__link: a.btn.dark__outline(href="#contact_modal")
+          span.text view details
+          +icon('#next')
+      .item(data-contact="ro")
+        .item__header
+          h4 Iasi
+            small Tomeşti village
+        .item__region: span ro
+        .item__address: p Construction Corp is in warehouse C1, hala 4/3
+        .item__contacts
+          h5 Telephone
+          p: a(href="tel:+") (+40) 754 223 019
+          p: a(href="mailto:consultingcomateois@yahoo.com") consultingcomateois@yahoo.com
+        .item__link: a.btn.dark__outline(href="#contact_modal")
+          span.text view details
+          +icon('#next')
+      .item(data-contact="ro")
+        .item__header
+          h4 Constanta
+        .item__region: span ro
+        .item__address: p Str.Stefan cel Mare no. 44, block M16, 1st floor
+        .item__contacts
+          h5 Telephone
+          p: a(href="tel:+") (+40) 771 118 873
+        .item__link: a.btn.dark__outline(href="#contact_modal")
+          span.text view details
+          +icon('#next')
+      .item(data-contact="ru")
+        .item__header
+          h4 Moscow
+        .item__region: span ru
+        .item__address: p Office: Moscow city, str. Ilovaiskaia 3, construction 2
+        .item__contacts
+          h5 Telephone
+          p: a(href="tel:+") +7 903 977 17 70
+          p: a(href="mailto:confort-msk@yandex.ru") confort-msk@yandex.ru
+        .item__link: a.btn.dark__outline(href="#contact_modal")
+          span.text view details
+          +icon('#next')
+      .item(data-contact="kz")
+        .item__header
+          h4 Almaty
+            small Shopping Center Armada
+        .item__region: span kz
+        .item__address: p Kazakhstan, Almaty, 050062, st. Cabdolova (Marecheka), 1/8, corner str.Saina, Shopping Center Armada, 4 unit,line С, 10 row, Confort
+        .item__contacts
+          h5 Telephone
+          p: a(href="tel:+") +877 562 188 24
+          p: a(href="mailto:confort.kz@gmail.com") confort.kz@gmail.com
+        .item__link: a.btn.dark__outline(href="#contact_modal")
+          span.text view details
+          +icon('#next')
+    #contact_modal.modal.contact.mfp-hide
+      .modal__close: +icon('#close')
+      .modal__title Moldova, Chisinau
+      .contact__map
+        #map(data-lat="47.04529" data-lng="28.81059" data-scale="14")
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLa52E3EJeehDidU_gDBx4B4NMzh01hiY")
+      .contact__body: .row
+        .col.md-6: .contact__address
+          h2 Moldova, Chisinau
+            small Buiucani
+          p MD 2069, Chișinau, str.Mesager, 19
+        .col.md-6: .contact__links
+          .row
+            .col.sm-6
+              .link
+                h5 Section achievement
+                p: span  Tel: <a href="tel:+">(+373) 22 74-17-08</a>
+              .link
+                h5 Salon-magazin
+                p: span  Tel: <a href="tel:+">(+373) 22 84-30-61</a>
+            .col.sm-6
+              .link
+                h5 Waiting room
+                p
+                  span  Tel: <a href="tel:+">(+373) 22 74-18-36</a>
+                  br
+                  span  Fax: <a href="tel:+">(+373) 22 74-76-14</a>
+      .modal__body
+        .row
+          .col.md-8: .contact__about
+            h3 About
+            p Centrally located in the unique Home, Fashion & Dining precinct. The King Living Showroom in Fortitude Valley, Brisbane has an amazing range of award-winning furniture designs including sofas, beds, dining and designer outdoor furniture as well as the Former Italy Collection.
+            p Convenient parking is located in front of the Showroom. 
+          .col.md-4: .contact__schedule
+            h3 Work program:
+            dl
+              dt Monday-Friday
+              dd 08:00-19:00
+              dt Saturday
+              dd 08:00-17:00
+              dt Sunday
+              dd 09:00-15:00
