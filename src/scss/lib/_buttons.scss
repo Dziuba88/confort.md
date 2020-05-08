@@ -18,6 +18,10 @@
     transform: translateX(-0.25em);
     transition: transform 0.25s linear;
     font-size: 14px;
+
+    &.first {
+      transform: translateX(0);
+    }
   }
 
   .text {
@@ -28,6 +32,9 @@
   &:hover {
     .icon {
       transform: translateX(0);
+      &.first {
+        transform: translateX(-0.25em);
+      }
     }
   }
   &.link {
@@ -75,6 +82,19 @@
     &:hover {
       color: $th_wht_1;
       background-color: $th_drk_1;
+    }
+  }
+  &.primary {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: $th_1;
+    color: $th_wht_1;
+    font-size: 14px;
+
+    &:hover {
+      background-color: $th_wht_1;
+      color: $th_blk;
     }
   }
 }

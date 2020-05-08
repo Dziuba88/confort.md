@@ -5,3 +5,4 @@
 // @prepros-prepend lib/tab.js
 // @prepros-prepend lib/carousel.js
 // @prepros-prepend lib/popup.js
+// @prepros-prepend lib/selectric.js

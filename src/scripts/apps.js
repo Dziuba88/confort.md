@@ -241,3 +241,81 @@ $(document).ready(function () {
     },
   });
 })();
+
+// CHECKOUT PAGE
+(function () {
+  $('select').selectric();
+  $('.promo .form__input input').keyup(function (e) {
+    $(this).parent('.form__input').find('button').fadeIn(250);
+  });
+  $('.promo .form__input button').click(function (e) {
+    $(this).parent('.form__input').find('input').val('').change();
+    $(this).fadeOut(250);
+  });
+  $('#delivery_1').change(function () {
+    if ($(this).is(':checked')) {
+      $('.delivery__address').fadeIn(150);
+      $('.delivery__total span').text($(this).val());
+    }
+  });
+  $('#delivery_2').change(function () {
+    if ($(this).is(':checked')) {
+      $('.delivery__address').fadeOut(150);
+      $('.delivery__total span').text($(this).val());
+    }
+  });
+
+  $('#contact_type_1').change(function () {
+    if ($(this).is(':checked')) {
+      $('.contacts__more').fadeOut(150);
+    }
+  });
+  $('#contact_type_2').change(function () {
+    if ($(this).is(':checked')) {
+      $('.contacts__more').fadeIn(150);
+    }
+  });
+  $('#contact_type_1').change();
+
+  $('.form__count .minus').click(function () {
+    var $val = parseInt($(this).parent('.form__count').find('input').val());
+    var $min = parseInt(
+      $(this).parent('.form__count').find('input').attr('min')
+    );
+    if ($val > $min) {
+      $(this)
+        .parent('.form__count')
+        .find('input')
+        .val($val - 1)
+        .change();
+    }
+  });
+
+  $('.form__count .plus').click(function () {
+    var $val = parseInt($(this).parent('.form__count').find('input').val());
+    var $max = parseInt(
+      $(this).parent('.form__count').find('input').attr('max')
+    );
+    if ($val < $max) {
+      $(this)
+        .parent('.form__count')
+        .find('input')
+        .val($val + 1)
+        .change();
+    }
+  });
+
+  $('.form__count input').change(function () {
+    var $minus = $(this).parent('.form__count').find('.minus');
+    var $plus = $(this).parent('.form__count').find('.plus');
+
+    var $val = parseInt($(this).val()),
+      $min = parseInt($(this).attr('min')),
+      $max = parseInt($(this).attr('max'));
+
+    $val > $min ? $minus.show() : $minus.hide();
+    $val < $max ? $plus.show() : $plus.hide();
+  });
+
+  $('.form__count input').change();
+})();

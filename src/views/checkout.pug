@@ -1,0 +1,231 @@
+extends layouts/layout
+block VARS
+  - var title = "Checkout"
+block PAGE
+  .page__intro.checkout
+    .ctn
+      .breadcrumbs: ul
+        li: a(href="") Principala
+        li: span Checkout
+  .checkout__panels: .ctn: .row
+    .col.lg-8
+      .panel.autoheight
+        .panel__header: h2 Shopping Cart
+        .panel__body
+          .cart
+            .cart__header
+              .title: span Item
+              .price: span Price
+              .count: span Qty
+              .total: span Subtotal (incl. TVA)
+            .cart__body
+              -for(i=1;i<=2;i++)
+                .item
+                  a.item__image(href=""): img(src="tmp/product.jpg", alt="")
+                  .item__body
+                    .item__info
+                      h4: a(href="") Colțar Irina
+                      ul.params
+                        li Dimensiuni: <span>120x150x80
+                        li Culoare textura: <span>Bej<span>
+                        li Model suport brațe: <span>Model 1<span>
+                    .item__price
+                      small Price
+                      span 19450 MDL
+                    .item__count
+                      .form__count
+                        input(type="number" value="1" min="1" max="10")
+                        button.minus: +icon('#minus')
+                        button.plus: +icon('#plus')
+                    .item__total: span.wraper
+                      small Subtotal (incl. TVA)
+                      span 19450 MDL
+                    .item__delete: a(href=""): +icon('#trash')
+        .panel__footer.total: .row
+          .col.sm-6: .promo
+            .form__input
+              label(for="promo_input") promotional code
+              input(type="text" placeholder="xxxx-xxxx-xxxx-xxxx")
+              button.save: +icon('#save')
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          .col.sm-6: .summary
+            dl
+              dt Subtotal (incl. TVA)
+              dd.summary__price: span 38900 mdl
+              dt TVA
+              dd: .summary__tva: span.inactive Not yet calculated
+              dt Order Total (incl. TVA)
+              dd.summary__total: span 38900 mdl
+      .goback: a.btn.dark__outline(href="")
+        +icon('#prev', 'icon first')
+        span.text continue shopping
+      .section.seealso
+        .section__header: .row: .col.lg-8.olg-2.oxl-2
+          h2 See also
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .row
+          -for(i=1;i<=12;i++)
+            .col.lg-3: a(href="").item
+              img(src="tmp/product.jpg", alt="")
+              span Colțar Irina
+    .col.lg-4: .row
+      .col.lg-12.md-6
+        .panel
+          .panel__header: h3 Delivery method
+          .panel__body: .delivery
+            .row
+              .col.xl-6
+                .form__checkbox
+                  input#delivery_1(type="radio", name="delivery" checked, value="350 mdl")
+                  label(for="delivery_1")
+                    .input: +icon('#checkbox')
+                    .image: +icon('#truck')
+                    .text
+                      span Home delivery
+                      small.price 350 mdl
+              .col.xl-6
+                .form__checkbox
+                  input#delivery_2(type="radio", name="delivery", value="Free")
+                  label(for="delivery_2")
+                    .input: +icon('#checkbox')
+                    .image: +icon('#store')
+                    .text
+                      span Pick up in store
+                      small.price Free
+            .delivery__address: .row
+              .col.xl-6
+                .form__select
+                  label State
+                  select#state(name="state")
+                    option(value="") Moldova
+                    option(value="") Romania
+                    option(value="") Ucraina
+                    option(value="") Rusia
+                    option(value="") Kazahstan
+              .col.xl-6
+                .form__select
+                  label City
+                  select#city(name="city")
+                    option(value="") Chishinau
+                    option(value="") Buharest
+                    option(value="") Moscova
+              .col.xl-12
+                .form__input
+                  label(for="address") Full address
+                  input#address(type="text")
+          .panel__footer.delivery__total
+            small Delivery total: 
+            span 350 mdl
+      .col.lg-12.md-6
+        .panel
+          .panel__header: h3 Payment method
+          .panel__body: .checkout__payment: .row
+            .col.xl-6
+              .form__checkbox
+                input#payment_1(type="radio", name="payment" checked)
+                label(for="payment_1")
+                  .input: +icon('#checkbox')
+                  .image: +icon('#payment_1')
+                  .text Pay online
+            .col.xl-6
+              .form__checkbox
+                input#payment_2(type="radio", name="payment")
+                label(for="payment_2")
+                  .input: +icon('#checkbox')
+                  .image: +icon('#payment_2')
+                  .text Pay by Bank transfer
+            .col.xl-6
+              .form__checkbox
+                input#payment_3(type="radio", name="payment")
+                label(for="payment_3")
+                  .input: +icon('#checkbox')
+                  .image: +icon('#payment_3')
+                  .text Pay With card on delivery
+            .col.xl-6
+              .form__checkbox
+                input#payment_4(type="radio", name="payment")
+                label(for="payment_4")
+                  .input: +icon('#checkbox')
+                  .image: +icon('#payment_4')
+                  .text Pay by Cash on delivery
+            .col.xl-12
+              .form__checkbox
+                input#payment_5(type="radio", name="payment")
+                label(for="payment_5")
+                  .input: +icon('#checkbox')
+                  .image: +icon('#payment_5')
+                  .text
+                    span buy on credit
+                    small Details will be discussed with the consultant by phone
+      .col.lg-12.md-6
+        .panel
+          .panel__header: h3 Personal information
+          .panel__body: .contacts
+            .row
+              .col.xl-6
+                .form__checkbox
+                  input#contact_type_1(type="radio", name="contact_type" checked, value="1")
+                  label(for="contact_type_1")
+                    .input: +icon('#checkbox')
+                    .text personal entity
+              .col.xl-6
+                .form__checkbox
+                  input#contact_type_2(type="radio", name="contact_type", value="2")
+                  label(for="contact_type_2")
+                    .input: +icon('#checkbox')
+                    .text Legal entity
+            .row
+              .col.xl-6
+                .form__input
+                  label(for="first_name") first name
+                  input#first_name(type="text")
+              .col.xl-6
+                .form__input
+                  label(for="last_name") last name
+                  input#last_name(type="text")
+              .col.xl-6
+                .form__input
+                  label(for="email") e-mail address
+                  input#email(type="email")
+              .col.xl-6
+                .form__input
+                  label(for="phone") phone number
+                  input#phone(type="tel")
+            .contacts__more
+              .form__input
+                label(for="company") Company
+                input#company(type="text")
+              .form__input
+                label(for="company_address") Legal address
+                input#company_address(type="text")
+              .form__input
+                label(for="company_fiscal") Fiscal Code
+                input#company_fiscal(type="text")
+              .form__input
+                label(for="company_vat") VAT code
+                input#company_vat(type="text")
+              .form__input
+                label(for="bank") The bank
+                input#bank(type="text")
+              .form__input
+                label(for="bank_code") Bank code
+                input#bank_code(type="text")
+              .form__input
+                label(for="bank_iban") iban
+                input#bank_iban(type="text")
+            .form__input
+              label(for="comment") comment
+              textarea#comment(name="", cols="30", rows="10")
+      .col.lg-12.md-6
+        .panel.checkout__summary
+          .panel__header: h2 Checkout
+          .panel__body: .summary: dl
+            dt Subtotal (incl. TVA)
+            dd.summary__price: span 38900 mdl
+            dt TVA
+            dd: .summary__tva: span.inactive Not yet calculated
+            dt Delivery
+            dd.summary__price: span 350 mdl
+            dt Order Total (incl. TVA)
+            dd.summary__total: span 38900 mdl
+          .panel__footer: button.btn.primary checkout now
