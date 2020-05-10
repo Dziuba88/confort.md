@@ -21,7 +21,7 @@ block PAGE
             .cart__body
               -for(i=1;i<=2;i++)
                 .item
-                  a.item__image(href=""): img(src="tmp/product.jpg", alt="")
+                  a.item__image(href=""): img(src="tmp/product_"+i+".jpg", alt="")
                   .item__body
                     .item__info
                       h4: a(href="") Colțar Irina
@@ -64,9 +64,12 @@ block PAGE
           h2 See also
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         .row
-          -for(i=1;i<=12;i++)
+          -for(i=1;i<=6;i++)
             .col.lg-3: a(href="").item
-              img(src="tmp/product.jpg", alt="")
+              img(src="tmp/product_1.jpg", alt="")
+              span Colțar Irina
+            .col.lg-3: a(href="").item
+              img(src="tmp/product_2.jpg", alt="")
               span Colțar Irina
     .col.lg-4: .row
       .col.lg-12.md-6
@@ -216,6 +219,11 @@ block PAGE
             .form__input
               label(for="comment") comment
               textarea#comment(name="", cols="30", rows="10")
+            .form__checkbox
+              input#terms(type="radio", name="terms", value="1")
+              label(for="terms")
+                .input: +icon('#checkbox')
+                .text I have read and agree to <a href="" target="_blank">the terms of delivery and payment</a>
       .col.lg-12.md-6
         .panel.checkout__summary
           .panel__header: h2 Checkout

@@ -11,6 +11,18 @@ $('[data-background]').each(function (index, item) {
   });
 });
 
+$('[data-simplebar]').each(function (index, el) {
+  new SimpleBar(el, {
+    autoHide: false,
+    forceVisible: true,
+  });
+});
+
+$('a.disabled').click(function (e) {
+  e.preventDefault();
+  return false;
+});
+
 // PRELOADER
 $(document).ready(function () {
   setTimeout(() => {
@@ -146,6 +158,16 @@ $(document).ready(function () {
     autoplay: true,
     autoplayTimeout: 10000,
     autoplayHoverPause: true,
+  });
+
+  $('.product__preview .owl-carousel').owlCarousel({
+    items: 1,
+    margin: 10,
+    smartSpeed: 700,
+    loop: true,
+    nav: true,
+    dots: false,
+    navText,
   });
 })();
 
@@ -318,4 +340,78 @@ $(document).ready(function () {
   });
 
   $('.form__count input').change();
+})();
+
+// CATALOG PAGE
+(function () {
+  var flt = document.querySelector('.catalog__list__filters');
+  new SimpleBar(flt, {
+    autoHide: false,
+    forceVisible: true,
+    classNames: { contentWrapper: 'dragscroll' },
+  });
+
+  var $range = $('.price__filter__range input'),
+    $inputFrom = $('.price__filter__min input'),
+    $inputTo = $('.price__filter__max input'),
+    instance,
+    min = 0,
+    max = 50000,
+    from = 14000,
+    to = 44000;
+
+  $range.ionRangeSlider({
+    skin: 'square',
+    type: 'double',
+    min: min,
+    max: max,
+    from: from,
+    to: to,
+    onStart: updateInputs,
+    onChange: updateInputs,
+    step: 100,
+    grid: true,
+  });
+  instance = $range.data('ionRangeSlider');
+
+  function updateInputs(data) {
+    from = data.from;
+    to = data.to;
+
+    $inputFrom.prop('value', from);
+    $inputTo.prop('value', to);
+  }
+
+  $inputFrom.on('input', function () {
+    var val = $(this).prop('value');
+
+    if (val < min) {
+      val = min;
+    } else if (val > to) {
+      val = to;
+    }
+
+    instance.update({
+      from: val,
+    });
+  });
+
+  $inputTo.on('input', function () {
+    var val = $(this).prop('value');
+
+    if (val < from) {
+      val = from;
+    } else if (val > max) {
+      val = max;
+    }
+
+    instance.update({
+      to: val,
+    });
+  });
+
+  $('.filters__toggle').click(function () {
+    $(this).toggleClass('active');
+    $('.catalog__filters__list').toggleClass('show');
+  });
 })();

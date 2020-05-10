@@ -168,6 +168,15 @@ input[type='number'] {
               font-weight: 700;
             }
           }
+
+          a {
+            color: $th_blk;
+            text-decoration: underline;
+            &:hover {
+              color: $th_1;
+              text-decoration: none;
+            }
+          }
         }
       }
 

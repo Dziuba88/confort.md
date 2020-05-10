@@ -1,0 +1,189 @@
+extends layouts/layout
+block VARS
+  - var title = "Vacancies"
+block PAGE
+  .page__intro.catalog
+    img.page__intro__img(src="tmp/category_bg.jpg", alt="")
+    .ctn
+      .breadcrumbs: ul
+        li: a(href="") Principala
+        li: span Vacancies
+      .page__intro__content: .row: .col.sm-8.md-6.lg-4
+        h1 Canapele
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. 
+  .catalog__wraper: .ctn: .row
+    .col.lg-3.md-4
+      .catalog__filters
+        .catalog__filters__header
+          h2
+            small selectați filtrele pentru
+            span Canapele
+        .filters__controls
+          button.filters__toggle: +icon('#filters')
+          .sep
+          button.btn.primary__outline
+            span.text Reseteaza filtrele
+            +icon('#close')
+        .catalog__filters__list
+          .panel
+            .panel__heading: a(data-toggle='collapse' href='#filterID-1')
+              span Preț
+              +icon('#next')
+            #filterID-1.collapse.fade.in: .panel__body
+              .filter(data-simplebar)
+                .price__filter
+                  .price__filter__inputs
+                    .input.price__filter__min
+                      input(type="text" value="14000")
+                      label: span MDL
+                    +icon('#range')
+                    .input.price__filter__max
+                      input(type="text" value="44000")
+                      label: span MDL
+                  .price__filter__range: input(type="text")
+
+          .panel
+            .panel__heading: a(data-toggle='collapse' href='#filterID-2')
+                span Culori
+                +icon('#next')
+            #filterID-2.collapse.fade.in: .panel__body
+              .filter(data-simplebar)
+                .filter__group: ul
+                  -for(i=0;i<10;i++)
+                    li
+                      input(type="checkbox", name="color", id='colorID'+i)
+                      label(for="colorID"+i)
+                        .input
+                          +icon('#checkbox', 'check')
+                          +icon('#uncheck', 'uncheck')
+                        .text Color title #{i}
+                        .count (1#{i})
+          .panel
+            .panel__heading: a(data-toggle='collapse' href='#filterID-3')
+                span Dimensiuni
+                +icon('#next')
+            #filterID-3.collapse.fade.in: .panel__body
+              .filter(data-simplebar)
+                .filter__group: ul
+                  -for(i=0;i<10;i++)
+                    li
+                      input(type="checkbox", name="dimension", id='dimensionID'+i)
+                      label(for="dimensionID"+i)
+                        .input
+                          +icon('#checkbox', 'check')
+                          +icon('#uncheck', 'uncheck')
+                        .text Dimention value #{i}
+                        .count (1#{i})
+          .panel
+            .panel__heading: a(data-toggle='collapse' href='#filterID-4')
+                span Tip
+                +icon('#next')
+            #filterID-4.collapse.fade.in: .panel__body
+              .filter(data-simplebar)
+                .filter__group: ul
+                  -for(i=0;i<3;i++)
+                    li
+                      input(type="checkbox", name="type", id='typeID'+i)
+                      label(for="typeID"+i)
+                        .input
+                          +icon('#checkbox', 'check')
+                          +icon('#uncheck', 'uncheck')
+                        .text Type value #{i}
+                        .count (1#{i})
+    .col.lg-9.md-8
+      .catalog__list
+        .catalog__list__header
+          .list__total
+            small Total produse 
+            span 389
+          .list__sort
+            .form__select
+              select#state(name="state")
+                option(value="" data-label) Ordonează
+                option(value="") Cele mai populare
+                option(value="") Cele mai noi
+                option(value="") Pret crescator
+                option(value="") Pret descrescator
+        .catalog__list__filters.dragscroll: ul
+          -for(i=1;i<=10;i++)
+            li: a.filter(href="")
+              span.text Selected Filter Title #{i}
+              +icon('#close')
+        .catalog__list__items
+          .row
+            -for(i=1;i<=4;i++)
+              .col.xl-4.lg-6.sm-6: .product
+                .product__header
+                  .left: span.new new
+                  .right: span.sale
+                    small reducere
+                    span -15%
+                .product__preview
+                  .owl-carousel
+                    a(href="").product__image: img(src="tmp/product_1.jpg", alt="")
+                    a(href="").product__image: img(src="tmp/product_2.jpg", alt="")
+                .product__title: a(href="") Colțar N-1#{i}
+                .product__price
+                  span.current De la 12,600 MDL
+                  span.old De la 12,600 MDL
+                .product__footer
+                  .row
+                    .col.xs-6: a.btn.dark__outline(href="")
+                      span.text vezi mai mult
+                      +icon('#next')
+                    .col.xs-6: a.btn.dark__outline(href="")
+                      span.text Adauga in cos
+                      +icon('#next')
+              .col.xl-4.lg-6.sm-6: .product
+                .product__header
+                  .left
+                  .right: span.sale
+                    small reducere
+                    span -15%
+                .product__preview
+                  .owl-carousel
+                    a(href="").product__image: img(src="tmp/product_1.jpg", alt="")
+                    a(href="").product__image: img(src="tmp/product_2.jpg", alt="")
+                .product__title: a(href="") Colțar N-2#{i}
+                .product__price
+                  span.current De la 12,600 MDL
+                  span.old De la 12,600 MDL
+                .product__footer
+                  .row
+                    .col.xs-6: a.btn.dark__outline(href="")
+                      span.text vezi mai mult
+                      +icon('#next')
+                    .col.xs-6: a.btn.dark__outline(href="")
+                      span.text Adauga in cos
+                      +icon('#next')
+              .col.xl-4.lg-6.sm-6: .product
+                .product__header
+                  .left: span.new new
+                  .right
+                .product__preview
+                  .owl-carousel
+                    a(href="").product__image: img(src="tmp/product_1.jpg", alt="")
+                    a(href="").product__image: img(src="tmp/product_2.jpg", alt="")
+                .product__title: a(href="") Colțar N-3#{i}
+                .product__price
+                  span.current De la 12,600 MDL
+                .product__footer
+                  .row
+                    .col.xs-6: a.btn.dark__outline(href="")
+                      span.text vezi mai mult
+                      +icon('#next')
+                    .col.xs-6: a.btn.dark__outline(href="")
+                      span.text Adauga in cos
+                      +icon('#next')
+        .catalog__list__footer: .pagination
+          ul
+            li: a(href="").btn.dark__outline.disabled
+              +icon('#prev', 'icon first')
+              span.text precedent
+            li.counter
+              span.current 3
+              span.sep /
+              span.total 126
+            li: a(href="").btn.dark__outline
+              span.text următoarea
+              +icon('#next')

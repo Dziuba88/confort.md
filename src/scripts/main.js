@@ -6,3 +6,6 @@
 // @prepros-prepend lib/carousel.js
 // @prepros-prepend lib/popup.js
 // @prepros-prepend lib/selectric.js
+// @prepros-prepend lib/simplebar.js
+// @prepros-prepend lib/drag.js
+// @prepros-prepend lib/range.js

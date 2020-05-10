@@ -8,6 +8,8 @@
 @import './plugins/carousel';
 @import './plugins/popup';
 @import './plugins/selectric';
+@import './plugins/simplebar';
+@import './plugins/range';
 
 // GLOBALS
 @import './lib/globals';
@@ -19,3 +21,4 @@
 @import './models/header';
 @import './models/footer';
 @import './models/sections';
+@import './models/catalog';

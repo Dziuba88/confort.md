@@ -83,7 +83,21 @@
       color: $th_wht_1;
       background-color: $th_drk_1;
     }
+
+    &.disabled {
+      color: $th_lht_2;
+      background: transparent;
+      border-color: currentColor;
+      cursor: default;
+      .icon {
+        transform: translateX(-0.25em);
+        &.first {
+          transform: translateX(0);
+        }
+      }
+    }
   }
+
   &.primary {
     display: block;
     width: 100%;
@@ -95,6 +109,27 @@
     &:hover {
       background-color: $th_wht_1;
       color: $th_blk;
+    }
+  }
+
+  &.primary__outline {
+    color: $th_1;
+    background-color: transparent;
+    border: 1px solid $th_1;
+    padding: 9px 19px;
+
+    .icon {
+      transform: scale(0.75);
+      margin-left: 0.25em;
+    }
+
+    &:hover {
+      color: $th_wht_1;
+      background-color: $th_1;
+
+      .icon {
+        transform: scale(1);
+      }
     }
   }
 }

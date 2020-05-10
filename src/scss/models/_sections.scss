@@ -967,6 +967,46 @@
   }
 }
 
+.pagination {
+  padding: 20px 0;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    user-select: none;
+    white-space: nowrap;
+
+    li {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+
+      &.counter {
+        font-size: 18px;
+        font-weight: 200;
+        margin: 0 0.5em;
+        white-space: nowrap;
+        color: $th_lht_2;
+
+        .sep {
+          margin: 0 0.25em;
+        }
+      }
+    }
+
+    @include mobileScreen {
+      .btn .text {
+        display: none;
+      }
+
+      .btn .icon {
+        transform: none !important;
+      }
+    }
+  }
+}
+
 .page__intro {
   padding-top: 100px;
   position: relative;
