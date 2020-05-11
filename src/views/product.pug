@@ -1,0 +1,299 @@
+extends layouts/layout
+block VARS
+  - var title = "Canapele"
+block PAGE
+  .page__intro.product
+    .ctn
+      .breadcrumbs: ul
+        li: a(href="") Principala
+        li: a(href="") Catalog
+        li: a(href="") Canapele
+        li: span Colțar Irina
+      .row
+        .col.xl-5.md-6.mobile__last: .product__main
+          .product__main__header
+            h1 Colțar Irina
+            p Sunt posibile diferite variante de tapițerie! Prețul variază în funcție de materialele folosite. La comandă prețurile diferă față de prețurile afișate pe site!
+          .product__main__price
+            .row
+              .col.sm-6
+                .product__price
+                  small price
+                  span.current 19,450 MDL
+                  span.old 27,800 MDL
+              .col.sm-6
+                button.btn.white__outline
+                  +icon("#cart", "icon first")
+                  span.text adaugă în coș
+                .info
+                  +icon("#info")
+                  span.text The price varies depending on the materials used and dimensions.
+          .product__main__dimensions
+            .dimention__label dimensions
+            .dimention
+              input#dimention_1(type="radio", name="dimention" checked)
+              label(for="dimention_1")
+                .input
+                .width
+                  small width
+                  span 3225 mm
+                .height
+                  small height
+                  span 2565 mm
+                .depth
+                  small depth
+                  span 830 mm
+                .sep
+                .space
+                  small Sleeping space
+                  span 1400 mm x 2615 mm
+            .dimention
+              input#dimention_2(type="radio", name="dimention")
+              label(for="dimention_2")
+                .input
+                .width
+                  small width
+                  span 2565 mm
+                .height
+                  small height
+                  span 3225 mm
+                .depth
+                  small depth
+                  span 830 mm
+                .sep
+                .space
+                  small Sleeping space
+                  span 1400 mm x 2615 mm
+          .product__main__params
+            .row
+              .col.xs-6: .params
+                .params__label colors
+                .params__list.lg
+                  .params__item
+                    input#color_1(type="radio", name="color", data-slide="0" checked)
+                    label(for="color_1"): img(src="tmp/color_1.jpg", alt="")
+                  .params__item
+                    input#color_2(type="radio", name="color", data-slide="1")
+                    label(for="color_2"): img(src="tmp/color_2.jpg", alt="")
+                .params__list.sm: .carousel__sm.owl-carousel
+              .col.xs-6: .params
+                .params__label sidewalls
+                .params__list.lg: .carousel__lg.owl-carousel
+                  .params__item
+                    input#sidewall_1(type="radio", name="sidewall", checked)
+                    label(for="sidewall_1"): img(src="tmp/sidewall_1.jpg", alt="")
+                  .params__item
+                    input#sidewall_2(type="radio", name="sidewall")
+                    label(for="sidewall_2"): img(src="tmp/sidewall_2.jpg", alt="")
+                  .params__item
+                    input#sidewall_3(type="radio", name="sidewall")
+                    label(for="sidewall_3"): img(src="tmp/sidewall_3.jpg", alt="")
+                  .params__item
+                    input#sidewall_4(type="radio", name="sidewall")
+                    label(for="sidewall_4"): img(src="tmp/sidewall_1.jpg", alt="")
+                .params__list.sm: .carousel__sm.owl-carousel
+        .col.xl-7.md-6.mobile__first
+          .product__main__gallery
+            .product__mobile__header: h1 Colțar Irina
+            .main__gallery.owl-carousel
+              -for(i=1;i<=5;i++)
+                a(href="tmp/product_"+i+".jpg" title="Colțar Irina"): img(src="tmp/product_"+i+".jpg", alt="")
+            .thumb__gallery.owl-carousel
+              -for(i=1;i<=5;i++)
+                .thumb: img(src="tmp/product_"+i+".jpg", alt="")
+      .product__main__footer: .row
+        .col.xl-5.md-6: .row
+          .col.sm-6
+            a(data-toggle="collapse" href="#collapse-info").btn.white__outline.collapsed
+              span.text METODA DE EXTENSIE
+              +icon('#next')
+          .col.sm-6
+            a(href="").btn.primary 
+              +icon('#preview', 'icon first')
+              span.text 3D view
+  #collapse-info.product__info.collapse.fade: .ctn
+    .row
+      .col.md-6.lg-5.xl-4: .product__info__image: img(src="tmp/product_1.jpg", alt="")
+      .col.md-6.lg-5.xl-4: .product__info__text
+        h2 Descoperă o lume de flexibilitate
+        p: strong O canapea modulară luxoasă și flexibilă, care te înconjoară confortabil
+        p Când nevoile tale se schimbă, Jasper se poate schimba împreună cu tine. Aranjamentul de platforme, perne și rafturi poate fi ușor deplasat și amenajat pentru a se potrivi cu orice ocazie, indiferent dacă vă relaxați acasă, vă distrați familia și prietenii sau vă cazați oaspeții peste noapte.
+    .product__info__footer: a(data-toggle="collapse" href="#collapse-info").btn.link
+      span.text ÎNCHIDE
+      +icon('#close')
+  .product__extended: .ctn
+    nav.product__extended__nav: ul
+      li.active: a(href='#description' data-toggle='tab')
+        span.text Descriere
+        +icon('#next')
+      li: a(href='#dimensions' data-toggle='tab')
+        span.text Dimensiuni
+        +icon('#next')
+      li: a(href='#information' data-toggle='tab')
+        span.text Informații suplimentare
+        +icon('#next')
+    .product__extended__wraper
+      #description.tab-pane.fade.in.active
+        .description
+          .row: .col.md-6.lg-4: .description__img: img(src="tmp/product_1.jpg", alt="")
+          .row
+            .col.md-4: .description__text
+              h3 Lorem ipsum dolor sit amet
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            .col.md-4: .description__text
+              h3 Lorem ipsum dolor sit amet
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            .col.md-4: .description__text
+              h3 Lorem ipsum dolor sit amet
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      #dimensions.tab-pane.fade
+        .dimensions__list: .row
+          .col.lg-3.md-4.sm-6: .dimension
+            .dimension__image: img(src="tmp/product_2.jpg", alt="")
+            .dimension__text: dl
+              dt width
+              dd 3225 mm
+              dt height
+              dd 2565 mm
+              dt depth
+              dd 830 mm
+              dt Sleeping space
+              dd 1400 mm x 2615 mm
+          .col.lg-3.md-4.sm-6: .dimension
+            .dimension__image: img(src="tmp/product_2.jpg", alt="")
+            .dimension__text: dl
+              dt width
+              dd 3225 mm
+              dt height
+              dd 2565 mm
+              dt depth
+              dd 830 mm
+              dt Sleeping space
+              dd 1400 mm x 2615 mm
+
+
+      #information.tab-pane.fade
+        .article
+          h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. (H2)
+          p Sed ligula quam, rutrum ut rutrum eu, mollis in velit. Mauris ipsum massa, aliquet nec mauris sit amet, lacinia commodo orci. Praesent consectetur sollicitudin erat nec volutpat. Maecenas eu tortor consequat, iaculis arcu non, volutpat nisl. Donec et lacinia mi, imperdiet dapibus arcu. Nunc convallis tincidunt justo eu condimentum. Nunc sit amet volutpat risus, a eleifend turpis. Pellentesque ex nisi, bibendum quis mollis et, pretium at nisl.
+          h3 Nullam porttitor, elit et dapibus lobortis, sapien odio imperdiet velit, a euismod metus ante a sem.  (H3)
+          p Fusce dignissim in ex vel dapibus. Ut maximus vulputate ante, et scelerisque nisl malesuada sed. Maecenas et venenatis magna. <a href=''>Nam ut varius risus</a>, nec lacinia odio. Ut mattis consectetur lobortis. Pellentesque a molestie lectus. Proin interdum augue quis mauris ultricies, quis mattis magna consectetur. <strong>Curabitur a imperdiet nisi.</strong> Nulla facilisi. Vestibulum aliquam imperdiet justo, a vestibulum ipsum sodales ac. <em>Etiam vel consequat tellus.</em> Morbi egestas metus porta, maximus leo vitae, posuere elit. Fusce congue purus ut orci ullamcorper ullamcorper.
+          h4 Nam efficitur leo nibh, eu ultrices ante consequat in. Proin in efficitur leo.  (H4)
+          p Praesent et libero eu mauris aliquet volutpat vitae a lectus. Sed odio mi, mollis id tortor sit amet, rhoncus porta mi. Donec finibus suscipit diam, eget ornare metus ultrices dapibus. Mauris at luctus purus, ac feugiat sapien. Quisque at nisi eros. Mauris a nisl arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet mi tempor, fringilla mauris eu, dictum felis. Integer a ultrices urna, in commodo metus. Maecenas dignissim libero nulla, et interdum urna aliquet nec. Ut ultrices venenatis bibendum. Sed dignissim nunc sapien, vel gravida elit bibendum non. In vel volutpat nunc. Pellentesque sit amet augue vitae nibh auctor iaculis a in arcu.
+          h5 Nam egestas risus ut mi dictum, a tristique ligula venenatis.  (H5)
+          p Proin vulputate dictum bibendum. Aenean suscipit est quis nisi cursus rhoncus. Nulla facilisi. Etiam a sollicitudin tellus. Duis tristique imperdiet purus ut facilisis. Praesent vel nisi et arcu facilisis faucibus. Sed eget justo sagittis, blandit velit nec, laoreet nisl. Praesent vitae pellentesque sem. Proin feugiat risus non quam ultricies lobortis.
+          h6 Pellentesque quis velit ut justo tristique porttitor. (H6)
+          ul
+            li Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.
+            li Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.
+            li Proin tincidunt nisl augue, at sodales massa tincidunt a.
+            li Sed at neque quis ante laoreet mattis. Aliquam erat volutpat.
+            li Fusce finibus lectus vitae lectus gravida rhoncus.
+            li Quisque id ex erat.
+          p Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit. Donec aliquet et tellus sed tempus. Nullam posuere bibendum quam. Proin placerat tincidunt lacinia. Suspendisse Suspendisse suscipit feugiat augue. Donec accumsan finibus commodo. Aenean feugiat risus ante, at sodales est ultricies id.
+          ol
+            li Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.
+            li Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.
+            li Proin tincidunt nisl augue, at sodales massa tincidunt a.
+          p Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit.
+  .section.featured__products: .ctn
+    .section__header: .row: .col.md-8.omd-2.lg-6.olg-3.xl-4.oxl-4
+      h2 produse populare
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    .catalog__list__items: .products__carousel.owl-carousel
+      .product
+        .product__header
+          .left: span.new new
+          .right: span.sale
+            small reducere
+            span -15%
+        .product__preview
+          a(href="").product__image: img(src="tmp/product_1.jpg", alt="")
+        .product__title: a(href="") Colțar N-1#{i}
+        .product__price
+          span.current De la 12,600 MDL
+          span.old De la 12,600 MDL
+        .product__footer
+          .row
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text vezi mai mult
+              +icon('#next')
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text Adauga in cos
+              +icon('#next')
+      .product
+        .product__header
+          .left
+          .right: span.sale
+            small reducere
+            span -15%
+        .product__preview
+          a(href="").product__image: img(src="tmp/product_2.jpg", alt="")
+        .product__title: a(href="") Colțar N-2#{i}
+        .product__price
+          span.current De la 12,600 MDL
+          span.old De la 12,600 MDL
+        .product__footer
+          .row
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text vezi mai mult
+              +icon('#next')
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text Adauga in cos
+              +icon('#next')
+      .product
+        .product__header
+          .left: span.new new
+          .right
+        .product__preview
+            a(href="").product__image: img(src="tmp/product_4.jpg", alt="")
+        .product__title: a(href="") Colțar N-3#{i}
+        .product__price
+          span.current De la 12,600 MDL
+        .product__footer
+          .row
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text vezi mai mult
+              +icon('#next')
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text Adauga in cos
+              +icon('#next')
+      .product
+        .product__header
+          .left
+          .right: span.sale
+            small reducere
+            span -15%
+        .product__preview
+          a(href="").product__image: img(src="tmp/product_2.jpg", alt="")
+        .product__title: a(href="") Colțar N-2#{i}
+        .product__price
+          span.current De la 12,600 MDL
+          span.old De la 12,600 MDL
+        .product__footer
+          .row
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text vezi mai mult
+              +icon('#next')
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text Adauga in cos
+              +icon('#next')
+      .product
+        .product__header
+          .left: span.new new
+          .right
+        .product__preview
+            a(href="").product__image: img(src="tmp/product_4.jpg", alt="")
+        .product__title: a(href="") Colțar N-3#{i}
+        .product__price
+          span.current De la 12,600 MDL
+        .product__footer
+          .row
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text vezi mai mult
+              +icon('#next')
+            .col.xs-6: a.btn.dark__outline(href="")
+              span.text Adauga in cos
+              +icon('#next')
+
+

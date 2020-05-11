@@ -1150,6 +1150,10 @@
     }
   }
 
+  &.product {
+    background: $th_drk_grd;
+  }
+
   @include tabletScreen {
     padding-top: 60px;
     &__content {
@@ -2548,6 +2552,32 @@ div.gmnoprint, div.gmnoscreen, img[src="https://maps.gstatic.com/mapfiles/api-3/
     .goback {
       margin-bottom: 20px;
       text-align: center;
+    }
+  }
+}
+
+.featured__products {
+  padding: 60px 0;
+  background-color: $th_wht_1;
+
+  .catalog__list__items {
+    margin: 0;
+    padding: 0;
+  }
+
+  .owl-carousel .owl-dots {
+    text-align: center;
+
+    button.owl-dot {
+      background: $th_lht_2;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      margin: 0 2px;
+
+      &.active {
+        background: $th_1;
+      }
     }
   }
 }

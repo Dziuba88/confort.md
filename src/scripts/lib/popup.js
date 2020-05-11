@@ -1133,7 +1133,7 @@
     options: {
       markup:
         '<div class="mfp-figure">' +
-        '<div class="modal__close"></div>' +
+        '<button type="button" class="modal__close gallery__close"><svg class="icon"><use xlink:href="assets/img/sprite.svg?#close"></use></svg></button>' +
         '<figure>' +
         '<div class="mfp-img"></div>' +
         '<figcaption>' +
