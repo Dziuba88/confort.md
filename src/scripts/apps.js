@@ -223,7 +223,7 @@ $(document).ready(function () {
     autoplay: false,
     autoplayTimeout: 10000,
     responsive: {
-      0: { items: 1, loop: true, stagePadding: 64, autoplay: true },
+      0: { items: 2, loop: true, stagePadding: 64, autoplay: true },
       768: { items: 4, loop: true, stagePadding: 64 },
       1000: { items: 8, loop: false, stagePadding: 0, autoplay: false },
       1200: { items: 8, loop: false, stagePadding: 0 },

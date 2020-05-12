@@ -2756,6 +2756,7 @@ div.gmnoprint, div.gmnoscreen, img[src="https://maps.gstatic.com/mapfiles/api-3/
 }
 
 .about {
+  opacity: 1 !important;
   &__video {
     position: relative;
     width: 100%;
@@ -2848,28 +2849,32 @@ div.gmnoprint, div.gmnoscreen, img[src="https://maps.gstatic.com/mapfiles/api-3/
 
   .awards__carousel {
     .owl-item {
-      .item {
-        opacity: 0.25;
-        padding: 2px 1px;
-        transition: 0.15s linear;
+      transition: 0.15s linear;
 
-        img {
-          display: block;
+      @include tabletScreenDown {
+        opacity: 0.5;
+        filter: grayscale(1);
+
+        &.active {
+          opacity: 1;
+          filter: grayscale(0);
         }
       }
 
-      &.active .item {
-        opacity: 1;
+      .item {
+        padding: 2px 1px;
       }
     }
 
-    &:hover .owl-item .item {
-      opacity: 0.5;
-      filter: grayscale(1);
+    @include mediumScreenUp {
+      &:hover .owl-item {
+        opacity: 0.5;
+        filter: grayscale(1);
 
-      &:hover {
-        opacity: 1;
-        filter: grayscale(0);
+        &:hover {
+          opacity: 1;
+          filter: grayscale(0);
+        }
       }
     }
   }
