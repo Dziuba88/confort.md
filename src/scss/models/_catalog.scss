@@ -1,6 +1,10 @@
 .catalog {
   .page__intro__content {
     padding: 100px 0 140px;
+
+    @include smallScreenDown {
+      padding: 40px 0;
+    }
   }
 
   h1 {
@@ -26,6 +30,10 @@
     overflow: hidden;
     padding: 60px 0;
     background-color: $th_wht_1;
+
+    @include smallScreenDown {
+      padding: 40px 0;
+    }
   }
   &__filters {
     padding-right: 20px;
@@ -1113,6 +1121,7 @@
     &__gallery {
       .main__gallery {
         margin-bottom: 10px;
+        background-color: $th_wht_2;
         .owl-nav {
           display: none;
 

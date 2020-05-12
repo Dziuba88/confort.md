@@ -1,0 +1,29 @@
+extends layouts/layout
+block VARS
+  - var title = "About us"
+block PAGE
+  .page__intro.about
+    img.page__intro__img(src="tmp/about_bg.jpg", alt="")
+    .ctn
+      .breadcrumbs: ul
+        li: a(href="") Principala
+        li: span About us
+      .page__intro__content: .row: .col.sm-8.md-6.lg-4
+        h1 About us
+        p The company CONFORT S.R.L.  has repeatedly received<br><strong class="upper">"Trademark of the year"</strong>
+      .awards__carousel.owl-carousel
+        -for(i=1;i<=8;i++)
+          .item: img(src="tmp/award_"+i+".jpg", alt="")
+  .about__wraper: .ctn: .row
+    .col.lg-6: .about__text
+      p A warm, joyful evening in a cozy family! Isn’t that thing everyone dreams of ?
+      p For more than 25 years our factory strives to make dreams come true and bring comfort and care to every home! Surely you have already sat on a “Confort” sofa or armchair …. Today, thousands of people know and like our furniture! You can observe the wonderful “Сonfort” sofas in ordinary houses in Drochia, Balti, Briceni, Tiraspol, Edinet, Cahul, Bucharest and Moscow! And we hope wholeheartedly, that our factory’s furniture won’t only decorate your interior and make your rest comfortable and pleasant, but will also offer you many happy moments and wonderful memories!
+      p Is it possible for high-quality furniture to be inexpensive? Not long ago, the answer to this question, of course, would have been negative. But now, we are breaking this stereotype. Today, thanks to advanced technologies, streamlined production processes, direct cooperation with leading suppliers of materials and accessories, “Сonfort” factory’s furniture has become available to a wide range of customers! In the “Confort” corporate shop you will find all the furniture you need for your home or office. And our big friendly team, consisting of more than 700 professionals, will realize your most daring ideas!
+    .col.lg-6
+
+      .about__video
+        iframe(frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope;" width="100%" height="100%" src="")
+        img(src="tmp/about_video.jpg", alt="")
+        button(data-video="https://www.youtube.com/embed/VsEkm-06ep0?playlist=VsEkm-06ep0&iv_load_policy=0&enablejsapi=1&disablekb=1&autoplay=1&playsinline=0&modestbranding=1&controls=0&showinfo=0&rel=0&loop=1&wmode=transparent&origin=https%3A%2F%2Fconfort.md&widgetid=1"): +icon('#play')
+
+  include models/showrooms

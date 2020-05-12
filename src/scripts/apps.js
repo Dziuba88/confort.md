@@ -23,6 +23,13 @@ $('a.disabled').click(function (e) {
   return false;
 });
 
+$('.about__video button').click(function () {
+  var $url = $(this).data('video');
+  var $iframe = $(this).closest('.about__video').find('iframe');
+  $iframe.attr('src', $url);
+  $(this).closest('.about__video').addClass('active');
+});
+
 // PRELOADER
 $(document).ready(function () {
   setTimeout(() => {
@@ -168,9 +175,6 @@ $(document).ready(function () {
     nav: true,
     dots: false,
     navText,
-    mouseDrag: false,
-    touchDrag: false,
-    freeDrag: false,
   });
 
   $('.featured__products .products__carousel').owlCarousel({
@@ -179,12 +183,51 @@ $(document).ready(function () {
     nav: false,
     dots: true,
     loop: true,
-    mouseDrag: false,
     responsiveRefreshRate: 100,
     responsive: {
       0: { items: 1 },
       768: { items: 2 },
       1200: { items: 3 },
+    },
+  });
+
+  $('.product__design__carousel').owlCarousel({
+    items: 1,
+    margin: 0,
+    stagePadding: 0,
+    nav: true,
+    navText: ['', ''],
+    dots: true,
+    loop: true,
+    responsiveRefreshRate: 100,
+    autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { stagePadding: 0 },
+      768: { stagePadding: 150 },
+      1000: { stagePadding: 250 },
+      1200: { stagePadding: 350 },
+      1580: { stagePadding: 0 },
+    },
+  });
+
+  $('.awards__carousel').owlCarousel({
+    items: 8,
+    margin: 0,
+    stagePadding: 0,
+    nav: false,
+    dots: false,
+    loop: false,
+    responsiveRefreshRate: 100,
+    autoplay: false,
+    autoplayTimeout: 10000,
+    responsive: {
+      0: { items: 1, loop: true, stagePadding: 64, autoplay: true },
+      768: { items: 4, loop: true, stagePadding: 64 },
+      1000: { items: 8, loop: false, stagePadding: 0, autoplay: false },
+      1200: { items: 8, loop: false, stagePadding: 0 },
+      1580: { items: 8, loop: false, stagePadding: 0 },
     },
   });
 })();
@@ -469,9 +512,6 @@ $(document).ready(function () {
         margin: 0,
         slideBy: 1,
         responsiveRefreshRate: 100,
-        mouseDrag: false,
-        touchDrag: false,
-        freeDrag: false,
       })
       .on('changed.owl.carousel', syncPosition2);
 
@@ -550,9 +590,6 @@ $(document).ready(function () {
             margin: 0,
             slideBy: 1,
             responsiveRefreshRate: 100,
-            mouseDrag: false,
-            touchDrag: false,
-            freeDrag: false,
           });
         }
       } else if (window.matchMedia('screen and (min-width: 1001px)').matches) {
@@ -569,9 +606,6 @@ $(document).ready(function () {
               margin: 0,
               slideBy: 1,
               responsiveRefreshRate: 100,
-              mouseDrag: false,
-              touchDrag: false,
-              freeDrag: false,
             });
           } else {
             $items.appendTo($container.find('.params__list.lg'));

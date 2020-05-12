@@ -354,123 +354,116 @@
               </svg></a></div>
         </div>
       </div>
-      <div class="product__extended">
+      <!--.product__extended: .ctn
+      nav.product__extended__nav: ul
+        li.active: a(href='#description' data-toggle='tab')
+          span.text Descriere
+          +icon('#next')
+        li: a(href='#dimensions' data-toggle='tab')
+          span.text Dimensiuni
+          +icon('#next')
+        li: a(href='#information' data-toggle='tab')
+          span.text Informații suplimentare
+          +icon('#next')
+      .product__extended__wraper
+        #description.tab-pane.fade.in.active
+          .description
+            .row: .col.md-6.lg-4: .description__img: img(src="tmp/product_1.jpg", alt="")
+            .row
+              .col.md-4: .description__text
+                h3 Lorem ipsum dolor sit amet
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              .col.md-4: .description__text
+                h3 Lorem ipsum dolor sit amet
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              .col.md-4: .description__text
+                h3 Lorem ipsum dolor sit amet
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        #dimensions.tab-pane.fade
+          .dimensions__list: .row
+            .col.lg-3.md-4.sm-6: .dimension
+              .dimension__image: img(src="tmp/product_2.jpg", alt="")
+              .dimension__text: dl
+                dt width
+                dd 3225 mm
+                dt height
+                dd 2565 mm
+                dt depth
+                dd 830 mm
+                dt Sleeping space
+                dd 1400 mm x 2615 mm
+            .col.lg-3.md-4.sm-6: .dimension
+              .dimension__image: img(src="tmp/product_2.jpg", alt="")
+              .dimension__text: dl
+                dt width
+                dd 3225 mm
+                dt height
+                dd 2565 mm
+                dt depth
+                dd 830 mm
+                dt Sleeping space
+                dd 1400 mm x 2615 mm
+      
+      
+        #information.tab-pane.fade
+          .article
+            h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. (H2)
+            p Sed ligula quam, rutrum ut rutrum eu, mollis in velit. Mauris ipsum massa, aliquet nec mauris sit amet, lacinia commodo orci. Praesent consectetur sollicitudin erat nec volutpat. Maecenas eu tortor consequat, iaculis arcu non, volutpat nisl. Donec et lacinia mi, imperdiet dapibus arcu. Nunc convallis tincidunt justo eu condimentum. Nunc sit amet volutpat risus, a eleifend turpis. Pellentesque ex nisi, bibendum quis mollis et, pretium at nisl.
+            h3 Nullam porttitor, elit et dapibus lobortis, sapien odio imperdiet velit, a euismod metus ante a sem.  (H3)
+            p Fusce dignissim in ex vel dapibus. Ut maximus vulputate ante, et scelerisque nisl malesuada sed. Maecenas et venenatis magna. <a href=''>Nam ut varius risus</a>, nec lacinia odio. Ut mattis consectetur lobortis. Pellentesque a molestie lectus. Proin interdum augue quis mauris ultricies, quis mattis magna consectetur. <strong>Curabitur a imperdiet nisi.</strong> Nulla facilisi. Vestibulum aliquam imperdiet justo, a vestibulum ipsum sodales ac. <em>Etiam vel consequat tellus.</em> Morbi egestas metus porta, maximus leo vitae, posuere elit. Fusce congue purus ut orci ullamcorper ullamcorper.
+            h4 Nam efficitur leo nibh, eu ultrices ante consequat in. Proin in efficitur leo.  (H4)
+            p Praesent et libero eu mauris aliquet volutpat vitae a lectus. Sed odio mi, mollis id tortor sit amet, rhoncus porta mi. Donec finibus suscipit diam, eget ornare metus ultrices dapibus. Mauris at luctus purus, ac feugiat sapien. Quisque at nisi eros. Mauris a nisl arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet mi tempor, fringilla mauris eu, dictum felis. Integer a ultrices urna, in commodo metus. Maecenas dignissim libero nulla, et interdum urna aliquet nec. Ut ultrices venenatis bibendum. Sed dignissim nunc sapien, vel gravida elit bibendum non. In vel volutpat nunc. Pellentesque sit amet augue vitae nibh auctor iaculis a in arcu.
+            h5 Nam egestas risus ut mi dictum, a tristique ligula venenatis.  (H5)
+            p Proin vulputate dictum bibendum. Aenean suscipit est quis nisi cursus rhoncus. Nulla facilisi. Etiam a sollicitudin tellus. Duis tristique imperdiet purus ut facilisis. Praesent vel nisi et arcu facilisis faucibus. Sed eget justo sagittis, blandit velit nec, laoreet nisl. Praesent vitae pellentesque sem. Proin feugiat risus non quam ultricies lobortis.
+            h6 Pellentesque quis velit ut justo tristique porttitor. (H6)
+            ul
+              li Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.
+              li Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.
+              li Proin tincidunt nisl augue, at sodales massa tincidunt a.
+              li Sed at neque quis ante laoreet mattis. Aliquam erat volutpat.
+              li Fusce finibus lectus vitae lectus gravida rhoncus.
+              li Quisque id ex erat.
+            p Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit. Donec aliquet et tellus sed tempus. Nullam posuere bibendum quam. Proin placerat tincidunt lacinia. Suspendisse Suspendisse suscipit feugiat augue. Donec accumsan finibus commodo. Aenean feugiat risus ante, at sodales est ultricies id.
+            ol
+              li Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.
+              li Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.
+              li Proin tincidunt nisl augue, at sodales massa tincidunt a.
+            p Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit.
+      -->
+      <div class="section product__design light">
         <div class="ctn">
-          <nav class="product__extended__nav">
-            <ul>
-              <li class="active"><a href="#description" data-toggle="tab"><span class="text">Descriere</span>
-                  <svg class="icon">
-                    <use xlink:href="assets/img/sprite.svg?#next"></use>
-                  </svg></a></li>
-              <li><a href="#dimensions" data-toggle="tab"><span class="text">Dimensiuni</span>
-                  <svg class="icon">
-                    <use xlink:href="assets/img/sprite.svg?#next"></use>
-                  </svg></a></li>
-              <li><a href="#information" data-toggle="tab"><span class="text">Informații suplimentare</span>
-                  <svg class="icon">
-                    <use xlink:href="assets/img/sprite.svg?#next"></use>
-                  </svg></a></li>
-            </ul>
-          </nav>
-          <div class="product__extended__wraper">
-            <div class="tab-pane fade in active" id="description">
-              <div class="description">
-                <div class="row">
-                  <div class="col md-6 lg-4">
-                    <div class="description__img"><img src="tmp/product_1.jpg" alt=""/></div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col md-4">
-                    <div class="description__text">
-                      <h3>Lorem ipsum dolor sit amet</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                  </div>
-                  <div class="col md-4">
-                    <div class="description__text">
-                      <h3>Lorem ipsum dolor sit amet</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                  </div>
-                  <div class="col md-4">
-                    <div class="description__text">
-                      <h3>Lorem ipsum dolor sit amet</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="dimensions">
-              <div class="dimensions__list">
-                <div class="row">
-                  <div class="col lg-3 md-4 sm-6">
-                    <div class="dimension">
-                      <div class="dimension__image"><img src="tmp/product_2.jpg" alt=""/></div>
-                      <div class="dimension__text">
-                        <dl>
-                          <dt>width</dt>
-                          <dd>3225 mm</dd>
-                          <dt>height</dt>
-                          <dd>2565 mm</dd>
-                          <dt>depth</dt>
-                          <dd>830 mm</dd>
-                          <dt>Sleeping space</dt>
-                          <dd>1400 mm x 2615 mm</dd>
-                        </dl>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col lg-3 md-4 sm-6">
-                    <div class="dimension">
-                      <div class="dimension__image"><img src="tmp/product_2.jpg" alt=""/></div>
-                      <div class="dimension__text">
-                        <dl>
-                          <dt>width</dt>
-                          <dd>3225 mm</dd>
-                          <dt>height</dt>
-                          <dd>2565 mm</dd>
-                          <dt>depth</dt>
-                          <dd>830 mm</dd>
-                          <dt>Sleeping space</dt>
-                          <dd>1400 mm x 2615 mm</dd>
-                        </dl>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="information">
-              <div class="article">
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. (H2)</h2>
-                <p>Sed ligula quam, rutrum ut rutrum eu, mollis in velit. Mauris ipsum massa, aliquet nec mauris sit amet, lacinia commodo orci. Praesent consectetur sollicitudin erat nec volutpat. Maecenas eu tortor consequat, iaculis arcu non, volutpat nisl. Donec et lacinia mi, imperdiet dapibus arcu. Nunc convallis tincidunt justo eu condimentum. Nunc sit amet volutpat risus, a eleifend turpis. Pellentesque ex nisi, bibendum quis mollis et, pretium at nisl.</p>
-                <h3>Nullam porttitor, elit et dapibus lobortis, sapien odio imperdiet velit, a euismod metus ante a sem.  (H3)</h3>
-                <p>Fusce dignissim in ex vel dapibus. Ut maximus vulputate ante, et scelerisque nisl malesuada sed. Maecenas et venenatis magna. <a href=''>Nam ut varius risus</a>, nec lacinia odio. Ut mattis consectetur lobortis. Pellentesque a molestie lectus. Proin interdum augue quis mauris ultricies, quis mattis magna consectetur. <strong>Curabitur a imperdiet nisi.</strong> Nulla facilisi. Vestibulum aliquam imperdiet justo, a vestibulum ipsum sodales ac. <em>Etiam vel consequat tellus.</em> Morbi egestas metus porta, maximus leo vitae, posuere elit. Fusce congue purus ut orci ullamcorper ullamcorper.</p>
-                <h4>Nam efficitur leo nibh, eu ultrices ante consequat in. Proin in efficitur leo.  (H4)</h4>
-                <p>Praesent et libero eu mauris aliquet volutpat vitae a lectus. Sed odio mi, mollis id tortor sit amet, rhoncus porta mi. Donec finibus suscipit diam, eget ornare metus ultrices dapibus. Mauris at luctus purus, ac feugiat sapien. Quisque at nisi eros. Mauris a nisl arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet mi tempor, fringilla mauris eu, dictum felis. Integer a ultrices urna, in commodo metus. Maecenas dignissim libero nulla, et interdum urna aliquet nec. Ut ultrices venenatis bibendum. Sed dignissim nunc sapien, vel gravida elit bibendum non. In vel volutpat nunc. Pellentesque sit amet augue vitae nibh auctor iaculis a in arcu.</p>
-                <h5>Nam egestas risus ut mi dictum, a tristique ligula venenatis.  (H5)</h5>
-                <p>Proin vulputate dictum bibendum. Aenean suscipit est quis nisi cursus rhoncus. Nulla facilisi. Etiam a sollicitudin tellus. Duis tristique imperdiet purus ut facilisis. Praesent vel nisi et arcu facilisis faucibus. Sed eget justo sagittis, blandit velit nec, laoreet nisl. Praesent vitae pellentesque sem. Proin feugiat risus non quam ultricies lobortis.</p>
-                <h6>Pellentesque quis velit ut justo tristique porttitor. (H6)</h6>
-                <ul>
-                  <li>Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.</li>
-                  <li>Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.</li>
-                  <li>Proin tincidunt nisl augue, at sodales massa tincidunt a.</li>
-                  <li>Sed at neque quis ante laoreet mattis. Aliquam erat volutpat.</li>
-                  <li>Fusce finibus lectus vitae lectus gravida rhoncus.</li>
-                  <li>Quisque id ex erat.</li>
-                </ul>
-                <p>Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit. Donec aliquet et tellus sed tempus. Nullam posuere bibendum quam. Proin placerat tincidunt lacinia. Suspendisse Suspendisse suscipit feugiat augue. Donec accumsan finibus commodo. Aenean feugiat risus ante, at sodales est ultricies id.</p>
-                <ol>
-                  <li>Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.</li>
-                  <li>Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.</li>
-                  <li>Proin tincidunt nisl augue, at sodales massa tincidunt a.</li>
-                </ol>
-                <p>Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit.</p>
+          <div class="section__header">
+            <div class="row">
+              <div class="col lg-8 olg-2 xl-6 oxl-3">
+                <h2>Flexible, modular sofa configurations</h2>
+                <p>Hugo also offers incredible modular sofa flexibility - with arms and backs that can be repositioned to easily change whenever you need. Hugo is the ultimate modular sofa.</p>
               </div>
             </div>
           </div>
+        </div>
+        <div class="product__design__carousel owl-carousel">
+          <div class="item"><img src="tmp/Hugo1-1500x720pxl.png" alt=""/></div>
+          <div class="item"><img src="tmp/Hugo2-1500x720pxl.png" alt=""/></div>
+          <div class="item"><img src="tmp/Hugo3-1500x720pxl.png" alt=""/></div>
+          <div class="item"><img src="tmp/Hugo4-1500x720pxl.png" alt=""/></div>
+        </div>
+      </div>
+      <div class="section product__design dark">
+        <div class="ctn">
+          <div class="section__header">
+            <div class="row">
+              <div class="col lg-8 olg-2 xl-6 oxl-3">
+                <h2>Flexible, modular sofa configurations</h2>
+                <p>Hugo also offers incredible modular sofa flexibility - with arms and backs that can be repositioned to easily change whenever you need. Hugo is the ultimate modular sofa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__design__carousel owl-carousel">
+          <div class="item"><img src="tmp/Hugo1-1500x720pxl.png" alt=""/></div>
+          <div class="item"><img src="tmp/Hugo2-1500x720pxl.png" alt=""/></div>
+          <div class="item"><img src="tmp/Hugo3-1500x720pxl.png" alt=""/></div>
+          <div class="item"><img src="tmp/Hugo4-1500x720pxl.png" alt=""/></div>
         </div>
       </div>
       <div class="section featured__products">
