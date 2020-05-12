@@ -194,7 +194,7 @@ $(document).ready(function () {
   $('.product__design__carousel').owlCarousel({
     items: 1,
     margin: 0,
-    stagePadding: 0,
+    stagePadding: 500,
     nav: true,
     navText: ['', ''],
     dots: true,
@@ -208,7 +208,7 @@ $(document).ready(function () {
       768: { stagePadding: 150 },
       1000: { stagePadding: 250 },
       1200: { stagePadding: 350 },
-      1580: { stagePadding: 0 },
+      1580: { stagePadding: 500 },
     },
   });
 
