@@ -96,7 +96,7 @@ block PAGE
                       span Pick up in store
                       small.price Free
             .delivery__address: .row
-              .col.sm-6
+              .col.xs-6
                 .form__select
                   label State
                   select#state(name="state")
@@ -105,7 +105,7 @@ block PAGE
                     option(value="") Ucraina
                     option(value="") Rusia
                     option(value="") Kazahstan
-              .col.sm-6
+              .col.xs-6
                 .form__select
                   label City
                   select#city(name="city")
@@ -165,55 +165,55 @@ block PAGE
           .panel__header: h3 Personal information
           .panel__body: .contacts
             .row
-              .col.sm-6
+              .col.xs-6
                 .form__checkbox
                   input#contact_type_1(type="radio", name="contact_type" checked, value="1")
                   label(for="contact_type_1")
                     .input: +icon('#checkbox')
                     .text personal entity
-              .col.sm-6
+              .col.xs-6
                 .form__checkbox
                   input#contact_type_2(type="radio", name="contact_type", value="2")
                   label(for="contact_type_2")
                     .input: +icon('#checkbox')
                     .text Legal entity
             .row
-              .col.sm-6
+              .col.xs-6
                 .form__input
                   label(for="first_name") first name
                   input#first_name(type="text")
-              .col.sm-6
+              .col.xs-6
                 .form__input
                   label(for="last_name") last name
                   input#last_name(type="text")
-              .col.sm-6
+              .col.xs-6
                 .form__input
                   label(for="email") e-mail address
                   input#email(type="email")
-              .col.sm-6
+              .col.xs-6
                 .form__input
                   label(for="phone") phone number
                   input#phone(type="tel")
             .contacts__more
               .row
-                .col.sm-6: .form__input
+                .col.xs-6: .form__input
                   label(for="company") Company
                   input#company(type="text")
-                .col.sm-6: .form__input
+                .col.xs-6: .form__input
                   label(for="company_address") Legal address
                   input#company_address(type="text")
               .row
-                .col.sm-6: .form__input
+                .col.xs-6: .form__input
                   label(for="company_fiscal") Fiscal Code
                   input#company_fiscal(type="text")
-                .col.sm-6: .form__input
+                .col.xs-6: .form__input
                   label(for="company_vat") VAT code
                   input#company_vat(type="text")
               .row
-                .col.sm-6: .form__input
+                .col.xs-6: .form__input
                   label(for="bank") The bank
                   input#bank(type="text")
-                .col.sm-6: .form__input
+                .col.xs-6: .form__input
                   label(for="bank_code") Bank code
                   input#bank_code(type="text")
               .form__input
