@@ -6,8 +6,11 @@
   width: 100%;
   transition: top 0.3s;
   z-index: 50;
+  user-select: none;
 
   .topline {
+    position: relative;
+    z-index: 2;
     &__wraper {
       position: relative;
       padding-left: 240px;
