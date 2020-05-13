@@ -3232,6 +3232,8 @@ div.gmnoprint, div.gmnoscreen, img[src="https://maps.gstatic.com/mapfiles/api-3/
 
     iframe {
       z-index: 0;
+      display: block;
+      border: 0;
     }
 
     img {
