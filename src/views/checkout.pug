@@ -26,9 +26,9 @@ block PAGE
                     .item__info
                       h4: a(href="") Colțar Irina
                       ul.params
-                        li Dimensiuni: <span>120x150x80
-                        li Culoare textura: <span>Bej<span>
-                        li Model suport brațe: <span>Model 1<span>
+                        li Dimensiuni: <span>120x150x80</span>
+                        li Culoare textura: <span>Bej</span>
+                        li Model suport brațe: <span>Model 1</span>
                     .item__price
                       small Price
                       span 19450 MDL
@@ -81,18 +81,18 @@ block PAGE
                 .form__checkbox
                   input#delivery_1(type="radio", name="delivery" checked, value="350 mdl")
                   label(for="delivery_1")
-                    .input: +icon('#checkbox')
-                    .image: +icon('#truck')
-                    .text
+                    span.input: +icon('#checkbox')
+                    span.image: +icon('#truck')
+                    span.text
                       span Home delivery
                       small.price 350 mdl
               .col.sm-6.md-6.lg-12.xl-6
                 .form__checkbox
                   input#delivery_2(type="radio", name="delivery", value="Free")
                   label(for="delivery_2")
-                    .input: +icon('#checkbox')
-                    .image: +icon('#store')
-                    .text
+                    span.input: +icon('#checkbox')
+                    span.image: +icon('#store')
+                    span.text
                       span Pick up in store
                       small.price Free
             .delivery__address: .row
@@ -127,37 +127,37 @@ block PAGE
               .form__checkbox
                 input#payment_1(type="radio", name="payment" checked)
                 label(for="payment_1")
-                  .input: +icon('#checkbox')
-                  .image: +icon('#payment_1')
-                  .text Pay online
+                  span.input: +icon('#checkbox')
+                  span.image: +icon('#payment_1')
+                  span.text Pay online
             .col.sm-6.md-6.lg-12.xl-6
               .form__checkbox
                 input#payment_2(type="radio", name="payment")
                 label(for="payment_2")
-                  .input: +icon('#checkbox')
-                  .image: +icon('#payment_2')
-                  .text Pay by Bank transfer
+                  span.input: +icon('#checkbox')
+                  span.image: +icon('#payment_2')
+                  span.text Pay by Bank transfer
             .col.sm-6.md-6.lg-12.xl-6
               .form__checkbox
                 input#payment_3(type="radio", name="payment")
                 label(for="payment_3")
-                  .input: +icon('#checkbox')
-                  .image: +icon('#payment_3')
-                  .text Pay With card on delivery
+                  span.input: +icon('#checkbox')
+                  span.image: +icon('#payment_3')
+                  span.text Pay With card on delivery
             .col.sm-6.md-6.lg-12.xl-6
               .form__checkbox
                 input#payment_4(type="radio", name="payment")
                 label(for="payment_4")
-                  .input: +icon('#checkbox')
-                  .image: +icon('#payment_4')
-                  .text Pay by Cash on delivery
+                  span.input: +icon('#checkbox')
+                  span.image: +icon('#payment_4')
+                  span.text Pay by Cash on delivery
             .col.xl-12
               .form__checkbox
                 input#payment_5(type="radio", name="payment")
                 label(for="payment_5")
-                  .input: +icon('#checkbox')
-                  .image: +icon('#payment_5')
-                  .text
+                  span.input: +icon('#checkbox')
+                  span.image: +icon('#payment_5')
+                  span.text
                     span buy on credit
                     small Details will be discussed with the consultant by phone
       .col.lg-12.md-6
@@ -169,14 +169,14 @@ block PAGE
                 .form__checkbox
                   input#contact_type_1(type="radio", name="contact_type" checked, value="1")
                   label(for="contact_type_1")
-                    .input: +icon('#checkbox')
-                    .text personal entity
+                    span.input: +icon('#checkbox')
+                    span.text personal entity
               .col.xs-6
                 .form__checkbox
                   input#contact_type_2(type="radio", name="contact_type", value="2")
                   label(for="contact_type_2")
-                    .input: +icon('#checkbox')
-                    .text Legal entity
+                    span.input: +icon('#checkbox')
+                    span.text Legal entity
             .row
               .col.xs-6
                 .form__input
@@ -225,8 +225,8 @@ block PAGE
             .form__checkbox
               input#terms(type="radio", name="terms", value="1")
               label(for="terms")
-                .input: +icon('#checkbox')
-                .text I have read and agree to <a href="" target="_blank">the terms of delivery and payment</a>
+                span.input: +icon('#checkbox')
+                span.text I have read and agree to <a href="" target="_blank">the terms of delivery and payment</a>
       .col.lg-12.md-6
         .panel.checkout__summary
           .panel__header: h2 Checkout
