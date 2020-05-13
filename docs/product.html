@@ -324,7 +324,7 @@
                       <svg class="icon">
                         <use xlink:href="assets/img/sprite.svg?#next"></use>
                       </svg></a></div>
-                  <div class="col sm-6"><a class="btn primary" href=""> 
+                  <div class="col sm-6"><a class="btn primary" href="#modal3D" data-show="modal"> 
                       <svg class="icon first">
                         <use xlink:href="assets/img/sprite.svg?#preview"></use>
                       </svg><span class="text">3D view</span></a></div>
@@ -583,6 +583,93 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal widget3D mfp-hide" id="modal3D">
+        <div class="modal__close">
+          <svg class="icon">
+            <use xlink:href="assets/img/sprite.svg?#close"></use>
+          </svg>
+        </div>
+        <div class="modal__title">Colțar Irina</div>
+        <div class="widget3D__wraper">
+          <div class="widget3D__header">
+            <svg class="icon first">
+              <use xlink:href="assets/img/sprite.svg?#preview"></use>
+            </svg><span class="text">3D view</span>
+          </div><img class="widget3D__canvas" src="tmp/product_1.jpg" alt=""/>
+          <div class="widget3D__footer">
+            <!-- toggle class active if option enabled-->
+            <button class="btn dark__outline" data-toggle="autoplay">autoplay</button>
+            <button class="btn dark__outline" data-toggle="dimentions">show dimentions</button>
+          </div>
+        </div>
+        <div class="widget3D__product">
+          <div class="widget3D__product__params">
+            <div class="param">
+              <div class="label">colors</div>
+              <div class="param__container">
+                <div class="param__item">
+                  <input id="modal_color_1" type="radio" name="modal_color" data-color="0" checked="checked"/>
+                  <label for="modal_color_1"><img src="tmp/color_1.jpg" alt=""/></label>
+                </div>
+                <div class="param__item">
+                  <input id="modal_color_2" type="radio" name="modal_color" data-color="1"/>
+                  <label for="modal_color_2"><img src="tmp/color_2.jpg" alt=""/></label>
+                </div>
+              </div>
+            </div>
+            <div class="param">
+              <div class="label">sidewalls</div>
+              <div class="param__container">
+                <div class="param__item">
+                  <input id="modal_sidewall_1" type="radio" name="modal_sidewall" checked="checked"/>
+                  <label for="modal_sidewall_1"><img src="tmp/sidewall_1.jpg" alt=""/></label>
+                </div>
+                <div class="param__item">
+                  <input id="modal_sidewall_2" type="radio" name="modal_sidewall"/>
+                  <label for="modal_sidewall_2"><img src="tmp/sidewall_2.jpg" alt=""/></label>
+                </div>
+                <div class="param__item">
+                  <input id="modal_sidewall_3" type="radio" name="modal_sidewall"/>
+                  <label for="modal_sidewall_3"><img src="tmp/sidewall_3.jpg" alt=""/></label>
+                </div>
+                <div class="param__item">
+                  <input id="modal_sidewall_4" type="radio" name="modal_sidewall"/>
+                  <label for="modal_sidewall_4"><img src="tmp/sidewall_1.jpg" alt=""/></label>
+                </div>
+              </div>
+            </div>
+            <div class="sep"></div>
+            <div class="price">
+              <div class="product__price"><small>price</small><span class="current">19,450 MDL</span><span class="old">27,800 MDL</span></div>
+            </div>
+          </div>
+          <div class="dimensions">
+            <div class="label">dimensions</div>
+            <div class="dimention">
+              <input id="modal_dimention_1" type="radio" name="modal_dimention" checked="checked"/>
+              <label for="modal_dimention_1">
+                <div class="input"></div>
+                <div class="width"><small>width</small><span>3225 mm</span></div>
+                <div class="height"><small>height</small><span>2565 mm</span></div>
+                <div class="depth"><small>depth</small><span>830 mm</span></div>
+                <div class="sep"></div>
+                <div class="space"><small>Sleeping space</small><span>1400 mm x 2615 mm</span></div>
+              </label>
+            </div>
+            <div class="dimention">
+              <input id="modal_dimention_2" type="radio" name="modal_dimention"/>
+              <label for="modal_dimention_2">
+                <div class="input"></div>
+                <div class="width"><small>width</small><span>2565 mm</span></div>
+                <div class="height"><small>height</small><span>3225 mm</span></div>
+                <div class="depth"><small>depth</small><span>830 mm</span></div>
+                <div class="sep"></div>
+                <div class="space"><small>Sleeping space</small><span>1400 mm x 2615 mm</span></div>
+              </label>
             </div>
           </div>
         </div>

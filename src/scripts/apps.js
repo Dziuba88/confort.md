@@ -568,6 +568,77 @@ $(document).ready(function () {
         },
       },
     });
+
+    function createModalParams() {
+      $('.widget3D__product__params .param').each(function (index, container) {
+        var $wraper = $(container);
+        var $list = $wraper.find('.param__container');
+        var $items = $wraper.find('.param__item');
+
+        function paramsReplace() {
+          if (window.matchMedia('screen and (max-width: 756px)').matches) {
+            $wraper.addClass('large');
+            $list.trigger('destroy.owl.carousel');
+            $list.addClass('owl-carousel');
+            $list.owlCarousel({
+              items: 2,
+              dots: false,
+              nav: true,
+              navText,
+              margin: 0,
+              slideBy: 1,
+              responsiveRefreshRate: 100,
+            });
+          } else if (
+            window.matchMedia('screen and (min-width: 757px)').matches
+          ) {
+            if ($items.length > 3) {
+              $wraper.addClass('large');
+              $list.trigger('destroy.owl.carousel');
+              $list.addClass('owl-carousel');
+              $list.owlCarousel({
+                items: 3,
+                dots: false,
+                nav: true,
+                navText,
+                margin: 0,
+                slideBy: 1,
+                responsiveRefreshRate: 100,
+              });
+            } else {
+              $wraper.removeClass('large');
+              $list.removeClass('owl-carousel');
+              $list.trigger('destroy.owl.carousel');
+            }
+          }
+        }
+
+        $(window).resize(function () {
+          paramsReplace();
+        });
+
+        paramsReplace();
+      });
+    }
+
+    $('[data-show="modal"]').magnificPopup({
+      type: 'inline',
+      fixedBgPos: true,
+      fixedContentPos: true,
+      overflowY: 'scroll',
+      callbacks: {
+        open: function () {
+          createModalParams();
+        },
+        close: function () {
+          var $wraper = $('.widget3D__product__params .param');
+          var $list = $wraper.find('.param__container');
+          $wraper.removeClass('large');
+          $list.removeClass('owl-carousel');
+          $list.trigger('destroy.owl.carousel');
+        },
+      },
+    });
   })();
 
   function paramsReplace() {

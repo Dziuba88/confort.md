@@ -108,7 +108,7 @@ block PAGE
               span.text METODA DE EXTENSIE
               +icon('#next')
           .col.sm-6
-            a(href="").btn.primary 
+            a(href="#modal3D" data-show="modal").btn.primary 
               +icon('#preview', 'icon first')
               span.text 3D view
   #collapse-info.product__info.collapse.fade: .ctn
@@ -316,4 +316,83 @@ block PAGE
               span.text Adauga in cos
               +icon('#next')
 
-
+  #modal3D.modal.widget3D.mfp-hide
+    .modal__close: +icon('#close')
+    .modal__title Colțar Irina
+    .widget3D__wraper
+      .widget3D__header
+        +icon('#preview', 'icon first')
+        span.text 3D view
+      img.widget3D__canvas(src="tmp/product_1.jpg", alt="")
+      .widget3D__footer
+        // toggle class active if option enabled
+        button.btn.dark__outline(data-toggle="autoplay") autoplay
+        button.btn.dark__outline(data-toggle="dimentions") show dimentions
+    .widget3D__product
+      .widget3D__product__params
+        .param
+          .label colors
+          .param__container
+            .param__item
+              input#modal_color_1(type="radio", name="modal_color", data-color="0" checked)
+              label(for="modal_color_1"): img(src="tmp/color_1.jpg", alt="")
+            .param__item
+              input#modal_color_2(type="radio", name="modal_color", data-color="1")
+              label(for="modal_color_2"): img(src="tmp/color_2.jpg", alt="")
+        .param
+          .label sidewalls
+          .param__container
+            .param__item
+              input#modal_sidewall_1(type="radio", name="modal_sidewall", checked)
+              label(for="modal_sidewall_1"): img(src="tmp/sidewall_1.jpg", alt="")
+            .param__item
+              input#modal_sidewall_2(type="radio", name="modal_sidewall")
+              label(for="modal_sidewall_2"): img(src="tmp/sidewall_2.jpg", alt="")
+            .param__item
+              input#modal_sidewall_3(type="radio", name="modal_sidewall")
+              label(for="modal_sidewall_3"): img(src="tmp/sidewall_3.jpg", alt="")
+            .param__item
+              input#modal_sidewall_4(type="radio", name="modal_sidewall")
+              label(for="modal_sidewall_4"): img(src="tmp/sidewall_1.jpg", alt="")
+        .sep
+        .price
+          .product__price
+            small price
+            span.current 19,450 MDL
+            span.old 27,800 MDL
+      .dimensions
+        .label dimensions
+        .dimention
+          input#modal_dimention_1(type="radio", name="modal_dimention" checked)
+          label(for="modal_dimention_1")
+            .input
+            .width
+              small width
+              span 3225 mm
+            .height
+              small height
+              span 2565 mm
+            .depth
+              small depth
+              span 830 mm
+            .sep
+            .space
+              small Sleeping space
+              span 1400 mm x 2615 mm
+        .dimention
+          input#modal_dimention_2(type="radio", name="modal_dimention")
+          label(for="modal_dimention_2")
+            .input
+            .width
+              small width
+              span 2565 mm
+            .height
+              small height
+              span 3225 mm
+            .depth
+              small depth
+              span 830 mm
+            .sep
+            .space
+              small Sleeping space
+              span 1400 mm x 2615 mm
