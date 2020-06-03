@@ -9,3 +9,4 @@
 // @prepros-prepend lib/simplebar.js
 // @prepros-prepend lib/drag.js
 // @prepros-prepend lib/range.js
+// @prepros-prepend lib/smartphoto.js

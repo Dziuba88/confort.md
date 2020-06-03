@@ -1119,6 +1119,31 @@
     }
 
     &__gallery {
+      .ebaboba {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+        &__link {
+          display: none;
+
+          &.btn {
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: auto;
+            overflow: hidden;
+
+            img {
+              transform: scale(0);
+              position: absolute;
+              top: 100%;
+              left: 100%;
+            }
+          }
+        }
+      }
+
       .main__gallery {
         margin-bottom: 10px;
         background-color: $th_wht_2;
@@ -1709,4 +1734,9 @@
       }
     }
   }
+}
+
+#stofe .product__title {
+  padding: 0;
+  padding-bottom: 20px;
 }

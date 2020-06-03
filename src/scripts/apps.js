@@ -553,7 +553,7 @@ $(document).ready(function () {
       }
     });
 
-    mainGallery.magnificPopup({
+    /*mainGallery.magnificPopup({
       delegate: 'a',
       type: 'image',
       gallery: {
@@ -567,7 +567,7 @@ $(document).ready(function () {
           return item.el.attr('title') + '<small>by CONFORT.MD</small>';
         },
       },
-    });
+    });*/
 
     function createModalParams() {
       $('.widget3D__product__params .param').each(function (index, container) {
@@ -692,3 +692,69 @@ $(document).ready(function () {
 
   paramsReplace();
 })();
+
+// SMARTPHOTO
+(function () {
+  var SmartPhotoOpt = {
+    // enables navigation arrows
+    arrows: true,
+
+    // enables navigation images
+    nav: false,
+
+    // enables animation
+    showAnimation: true,
+
+    // enables vertical gravity
+    verticalGravity: false,
+
+    // uses accelerometer to move images
+    useOrientationApi: false,
+
+    // uses history API
+    useHistoryApi: false,
+
+    // swipe to close
+    swipeTopToClose: false,
+    swipeBottomToClose: false,
+
+    // swipe offset in px
+    swipeOffset: 0,
+
+    // header & footer height
+    headerHeight: 40,
+    footerHeight: 20,
+
+    // frequency to apply force to images
+    forceInterval: 0,
+
+    // scroll offset to load images
+    loadOffset: 0,
+
+    // resize images to fill/fit on the screen
+    resizeStyle: 'fit',
+
+    // default attribute for lazy load
+    lazyAttribute: 'data-src',
+
+    // default messages
+    message: {
+      gotoNextImage: 'go to the next image',
+      gotoPrevImage: 'go to the previous image',
+      closeDialog: 'close the image dialog',
+    },
+  };
+  $('.js-smartPhoto').SmartPhoto(SmartPhotoOpt);
+  $('.ebaboba__link').SmartPhoto(SmartPhotoOpt);
+  $('[data-link="stofe"]').SmartPhoto(SmartPhotoOpt);
+})();
+$(document).on('click', 'a[href^="#"]', function (event) {
+  event.preventDefault();
+
+  $('html, body').animate(
+    {
+      scrollTop: $($.attr(this, 'href')).offset().top,
+    },
+    500
+  );
+});

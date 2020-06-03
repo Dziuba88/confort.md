@@ -95,14 +95,21 @@ block PAGE
         .col.xl-7.md-6.mobile__first
           .product__main__gallery
             .product__mobile__header: h1 Colțar Irina
+            .ebaboba
+              a.btn.primary.ebaboba__link(href="tmp/product_1.jpg" title="Colțar Irina")
+                span În magazin
+                img(src="tmp/product_1.jpg", alt="", data-group="ebaboba")
+              -for(i=2;i<=4;i++)
+                a.ebaboba__link(href="tmp/product_"+i+".jpg" title="Colțar Irina"): img(src="tmp/product_"+i+".jpg", alt="", data-group="ebaboba")
             .main__gallery.owl-carousel
               -for(i=1;i<=5;i++)
-                a(href="tmp/product_"+i+".jpg" title="Colțar Irina"): img(src="tmp/product_"+i+".jpg", alt="")
+                a.js-smartPhoto(href="tmp/product_"+i+".jpg" title="Colțar Irina"): img(src="tmp/product_"+i+".jpg", alt="", data-group="main__gallery")
             .thumb__gallery.owl-carousel
               -for(i=1;i<=5;i++)
                 .thumb: img(src="tmp/product_"+i+".jpg", alt="")
       .product__main__footer: .row
         .col.xl-5.md-6: .row
+          .col.xs-12: a(href="#stofe").btn.white Vezi stofe
           .col.sm-6
             a(data-toggle="collapse" href="#collapse-info").btn.white__outline.collapsed
               span.text METODA DE EXTENSIE
@@ -121,81 +128,6 @@ block PAGE
     .product__info__footer: a(data-toggle="collapse" href="#collapse-info").btn.link
       span.text ÎNCHIDE
       +icon('#close')
-  //.product__extended: .ctn
-    nav.product__extended__nav: ul
-      li.active: a(href='#description' data-toggle='tab')
-        span.text Descriere
-        +icon('#next')
-      li: a(href='#dimensions' data-toggle='tab')
-        span.text Dimensiuni
-        +icon('#next')
-      li: a(href='#information' data-toggle='tab')
-        span.text Informații suplimentare
-        +icon('#next')
-    .product__extended__wraper
-      #description.tab-pane.fade.in.active
-        .description
-          .row: .col.md-6.lg-4: .description__img: img(src="tmp/product_1.jpg", alt="")
-          .row
-            .col.md-4: .description__text
-              h3 Lorem ipsum dolor sit amet
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            .col.md-4: .description__text
-              h3 Lorem ipsum dolor sit amet
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            .col.md-4: .description__text
-              h3 Lorem ipsum dolor sit amet
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      #dimensions.tab-pane.fade
-        .dimensions__list: .row
-          .col.lg-3.md-4.sm-6: .dimension
-            .dimension__image: img(src="tmp/product_2.jpg", alt="")
-            .dimension__text: dl
-              dt width
-              dd 3225 mm
-              dt height
-              dd 2565 mm
-              dt depth
-              dd 830 mm
-              dt Sleeping space
-              dd 1400 mm x 2615 mm
-          .col.lg-3.md-4.sm-6: .dimension
-            .dimension__image: img(src="tmp/product_2.jpg", alt="")
-            .dimension__text: dl
-              dt width
-              dd 3225 mm
-              dt height
-              dd 2565 mm
-              dt depth
-              dd 830 mm
-              dt Sleeping space
-              dd 1400 mm x 2615 mm
-
-
-      #information.tab-pane.fade
-        .article
-          h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. (H2)
-          p Sed ligula quam, rutrum ut rutrum eu, mollis in velit. Mauris ipsum massa, aliquet nec mauris sit amet, lacinia commodo orci. Praesent consectetur sollicitudin erat nec volutpat. Maecenas eu tortor consequat, iaculis arcu non, volutpat nisl. Donec et lacinia mi, imperdiet dapibus arcu. Nunc convallis tincidunt justo eu condimentum. Nunc sit amet volutpat risus, a eleifend turpis. Pellentesque ex nisi, bibendum quis mollis et, pretium at nisl.
-          h3 Nullam porttitor, elit et dapibus lobortis, sapien odio imperdiet velit, a euismod metus ante a sem.  (H3)
-          p Fusce dignissim in ex vel dapibus. Ut maximus vulputate ante, et scelerisque nisl malesuada sed. Maecenas et venenatis magna. <a href=''>Nam ut varius risus</a>, nec lacinia odio. Ut mattis consectetur lobortis. Pellentesque a molestie lectus. Proin interdum augue quis mauris ultricies, quis mattis magna consectetur. <strong>Curabitur a imperdiet nisi.</strong> Nulla facilisi. Vestibulum aliquam imperdiet justo, a vestibulum ipsum sodales ac. <em>Etiam vel consequat tellus.</em> Morbi egestas metus porta, maximus leo vitae, posuere elit. Fusce congue purus ut orci ullamcorper ullamcorper.
-          h4 Nam efficitur leo nibh, eu ultrices ante consequat in. Proin in efficitur leo.  (H4)
-          p Praesent et libero eu mauris aliquet volutpat vitae a lectus. Sed odio mi, mollis id tortor sit amet, rhoncus porta mi. Donec finibus suscipit diam, eget ornare metus ultrices dapibus. Mauris at luctus purus, ac feugiat sapien. Quisque at nisi eros. Mauris a nisl arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet mi tempor, fringilla mauris eu, dictum felis. Integer a ultrices urna, in commodo metus. Maecenas dignissim libero nulla, et interdum urna aliquet nec. Ut ultrices venenatis bibendum. Sed dignissim nunc sapien, vel gravida elit bibendum non. In vel volutpat nunc. Pellentesque sit amet augue vitae nibh auctor iaculis a in arcu.
-          h5 Nam egestas risus ut mi dictum, a tristique ligula venenatis.  (H5)
-          p Proin vulputate dictum bibendum. Aenean suscipit est quis nisi cursus rhoncus. Nulla facilisi. Etiam a sollicitudin tellus. Duis tristique imperdiet purus ut facilisis. Praesent vel nisi et arcu facilisis faucibus. Sed eget justo sagittis, blandit velit nec, laoreet nisl. Praesent vitae pellentesque sem. Proin feugiat risus non quam ultricies lobortis.
-          h6 Pellentesque quis velit ut justo tristique porttitor. (H6)
-          ul
-            li Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.
-            li Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.
-            li Proin tincidunt nisl augue, at sodales massa tincidunt a.
-            li Sed at neque quis ante laoreet mattis. Aliquam erat volutpat.
-            li Fusce finibus lectus vitae lectus gravida rhoncus.
-            li Quisque id ex erat.
-          p Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit. Donec aliquet et tellus sed tempus. Nullam posuere bibendum quam. Proin placerat tincidunt lacinia. Suspendisse Suspendisse suscipit feugiat augue. Donec accumsan finibus commodo. Aenean feugiat risus ante, at sodales est ultricies id.
-          ol
-            li Vivamus sit amet tellus mi. Donec non congue diam, ac convallis urna.
-            li Mauris quis est dui. Donec vulputate nibh lacinia sollicitudin lacinia.
-            li Proin tincidunt nisl augue, at sodales massa tincidunt a.
-          p Fusce at arcu porttitor est commodo pulvinar nec ut metus. Etiam fringilla tortor sit amet urna pellentesque, et iaculis velit suscipit.
   .section.product__design.light
     .ctn
       .section__header: .row: .col.lg-8.olg-2.xl-6.oxl-3
@@ -229,7 +161,7 @@ block PAGE
             span -15%
         .product__preview
           a(href="").product__image: img(src="tmp/product_1.jpg", alt="")
-        .product__title: a(href="") Colțar N-1#{i}
+        .product__title: a(href="") Colțar N-1
         .product__price
           span.current De la 12,600 MDL
           span.old De la 12,600 MDL
@@ -315,6 +247,31 @@ block PAGE
             .col.xs-6: a.btn.dark__outline(href="")
               span.text Adauga in cos
               +icon('#next')
+  #stofe.section.featured__products: .ctn
+    .section__header: .row: .col.md-8.omd-2.lg-6.olg-3.xl-4.oxl-4
+      h2 Vezi stofe
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    .catalog__list__items: .products__carousel.owl-carousel
+      .product
+        .product__preview
+          a(href="tmp/product_1.jpg" data-link="stofe").product__image: img(src="tmp/product_1.jpg", alt="", data-group="ebaboba2")
+        .product__title stofe N-1
+      .product
+        .product__preview
+          a(href="tmp/product_2.jpg" data-link="stofe").product__image: img(src="tmp/product_2.jpg", alt="", data-group="ebaboba2")
+        .product__title stofe N-2
+      .product
+        .product__preview
+            a(href="tmp/product_4.jpg" data-link="stofe").product__image: img(src="tmp/product_4.jpg", alt="", data-group="ebaboba2")
+        .product__title stofe N-3
+      .product
+        .product__preview
+          a(href="tmp/product_2.jpg" data-link="stofe").product__image: img(src="tmp/product_2.jpg", alt="", data-group="ebaboba2")
+        .product__title stofe N-4
+      .product
+        .product__preview
+            a(href="tmp/product_4.jpg" data-link="stofe").product__image: img(src="tmp/product_4.jpg", alt="", data-group="ebaboba2")
+        .product__title stofe N-5
 
   #modal3D.modal.widget3D.mfp-hide
     .modal__close: +icon('#close')
