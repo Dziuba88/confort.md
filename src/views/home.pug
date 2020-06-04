@@ -19,36 +19,77 @@ block PAGE
               span.text catalogul de produse
               +icon('#next')
   .welcome__categories
-    .shadows
     .ctn
       .welcome__categories__header 
         h2 Mobilier moldovenesc
-        p Confort.md este în fruntea designului și a producției de mobilă din Moldova.
+        p Confort.md este în fruntea designului și a<br>producției de mobilă din Moldova.
         a.btn.link(href="") 
           span.text catalogul de produse
           +icon('#next')
       .welcome__categories__list: ul
         li.item-1: a(href="" data-aos="zoom-in-up")
           img(src="tmp/cat_1.png", alt="").image
-          span.title Canapele
+          span.overlay
+            span.title Canapele
+            span.btn.white-link
+              span.text vezi mai mult
+              +icon('#next')
         li.item-2: a(href="" data-aos="zoom-in-up")
           img(src="tmp/cat_2.png", alt="").image
-          span.title Coltare
+          span.overlay
+            span.title Colțare
+            span.btn.white-link
+              span.text vezi mai mult
+              +icon('#next')
         li.item-3: a(href="" data-aos="zoom-in-up")
           img(src="tmp/cat_3.png", alt="").image
-          span.title Scaune și mese
-        li.item-4: a(href="" data-aos="zoom-in-up")
-          img(src="tmp/cat_4.png", alt="").image
-          span.title Paturi
-        li.item-5: a(href="" data-aos="zoom-in-up")
-          img(src="tmp/cat_5.png", alt="").image
-          span.title Mobila corp
+          span.overlay
+            span.title Scaune și Mese
+            span.btn.white-link
+              span.text vezi mai mult
+              +icon('#next')
         li.item-6: a(href="" data-aos="zoom-in-up")
           img(src="tmp/cat_6.png", alt="").image
-          span.title Seturi
+          span.overlay
+            span.title Accesorii
+            span.btn.white-link
+              span.text vezi mai mult
+              +icon('#next')
+        li.item-4: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_4.png", alt="").image
+          span.overlay
+            span.title Seturi
+            span.btn.white-link
+              span.text vezi mai mult
+              +icon('#next')
+        li.item-5: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_5.png", alt="").image
+          span.overlay
+            span.title Fotolii
+            span.btn.white-link
+              span.text vezi mai mult
+              +icon('#next')
+        li.item-7: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_7.png", alt="").image
+          span.overlay
+            span.title Mobilă de birou
+            span.btn.white-link
+              span.text vezi mai mult
+              +icon('#next')
+        li.item-8: a(href="" data-aos="zoom-in-up")
+          img(src="tmp/cat_8.png", alt="").image
+          span.overlay
+            span.title Mobilă corp
+            span.btn.white-link
+              span.text vezi mai mult
+              +icon('#next')
       .welcome__categories__footer
-        a.btn.link(href="") 
-          span.text catalogul de produse
-          +icon('#next')
+        img(src="tmp/govnoicon.png", alt="")
+        span Livrare și asamblare gratuită în raza<br>orașului Chișinău
+    .govnoshadows: .ctn
+      .govnoshadow_1
+      .govnoshadow_2
+      .govnoshadow_3
+      .govnoshadow_4
   include models/showrooms
   include models/newsfeed

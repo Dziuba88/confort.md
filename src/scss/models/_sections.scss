@@ -370,6 +370,34 @@
   position: relative;
   z-index: 2;
 
+  .ctn {
+    position: relative;
+  }
+
+  .govnoshadows {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    .ctn {
+      position: relative;
+    }
+
+    div {
+      position: absolute;
+      background-color: #ebebeb;
+    }
+  }
+
+  &__header,
+  &__footer {
+    position: absolute;
+  }
+
   &__list {
     ul {
       margin: 0;
@@ -377,466 +405,699 @@
       list-style: none;
 
       li {
-        display: block;
         a {
           display: block;
-          position: relative;
-          overflow: hidden;
-          position: relative;
+          position: absolute;
+          color: $th_wht_1;
           text-decoration: none;
-          background-color: $th_drk_1;
-          border: 1px solid $th_lht_1;
+          font-size: 30px;
+          line-height: 1;
+          font-weight: 100;
+          border: 2px solid $th_lht_1;
+          z-index: 10;
 
           .image {
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: opacity 0.25s ease-in-out;
+            position: relative;
             z-index: 0;
-            object-fit: cover;
-          }
-
-          .title {
-            padding: 5px 10px;
-            position: absolute;
-            z-index: 2;
-            background-color: rgba($th_blk, 0.8);
-            color: $th_wht_1;
-            font-size: 18px;
-            line-height: 24px;
-            font-weight: 200;
-          }
-
-          &:hover .image {
-            opacity: 0.85;
-          }
-        }
-      }
-    }
-  }
-  &__header {
-    h2 {
-      font-size: 28px;
-      line-height: 1.2;
-      text-transform: uppercase;
-      font-weight: 200;
-      margin: 0 0 10px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 24px;
-      color: rgba($th_drk_1, 0.5);
-      font-weight: 200;
-      margin: 0 0 10px;
-    }
-  }
-  &__footer {
-    padding-top: 5px;
-    text-align: center;
-  }
-
-  .shadows {
-    display: none;
-  }
-
-  @include smallScreenDown {
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-    &__header {
-      margin-bottom: 20px;
-      h2 {
-        font-size: 24px;
-      }
-      .btn {
-        display: none;
-      }
-    }
-
-    &__list ul {
-      display: flex;
-      margin: 0 -5px;
-
-      flex-wrap: wrap;
-
-      li {
-        display: block;
-        padding: 5px;
-        flex: none;
-        width: 50%;
-
-        a {
-          padding-top: 100%;
-
-          .title {
+            display: block;
             width: 100%;
-            left: 0;
-            bottom: 0;
-            font-size: 14px;
-            font-weight: 500;
           }
-        }
-      }
-    }
-  }
 
-  @include tabletScreenUp {
-    .shadows {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      overflow: hidden;
-      display: block;
+          .overlay {
+            display: flex;
+            flex-direction: column;
+            width: 180px;
+            height: 160px;
+            padding: 20px 10px;
+            background-color: rgba($th_blk, 0.8);
+            position: absolute;
+            z-index: 1;
 
-      &:before,
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        background-color: $th_wht_2;
-        height: 280px;
-        width: 100vw;
-        z-index: 0;
-      }
+            .title {
+              flex: 1;
+            }
 
-      &:before {
-        left: 65%;
-        top: 0;
-      }
-      &:after {
-        content: '';
-        right: 65%;
-        bottom: 0;
-      }
-    }
-    .ctn {
-      position: relative;
-      z-index: 1;
-    }
-    &__header {
-      position: absolute;
-    }
+            .white-link {
+              text-align: left;
+              padding: 0;
 
-    &__footer {
-      display: none;
-    }
-
-    &__list {
-      li {
-        position: absolute;
-        z-index: 1;
-
-        a {
-          .title {
-            width: 160px;
+              &:hover {
+                color: $th_wht_1;
+                opacity: 0.75;
+              }
+            }
           }
-        }
-      }
-      .item-1 a .title {
-        left: 0;
-        top: 40px;
-      }
-
-      .item-2 a .title {
-        left: 0;
-        top: 40px;
-      }
-
-      .item-3 a .title {
-        right: 0;
-        top: 40px;
-      }
-
-      .item-4 a .title {
-        right: 0;
-        bottom: 40px;
-      }
-      .item-5 a .title {
-        left: 0;
-        bottom: 40px;
-      }
-      .item-6 a .title {
-        left: 0;
-        bottom: 40px;
-      }
-    }
-  }
-
-  @include tabletScreen {
-    .ctn {
-      height: 860px;
-    }
-    &__header {
-      width: 390px;
-      top: 250px;
-      left: 10px;
-    }
-
-    &__list {
-      .item-1 {
-        left: 70px;
-        top: -60px;
-        width: 530px;
-
-        a {
-          height: 260px;
-        }
-      }
-      .item-2 {
-        left: 440px;
-        top: 220px;
-        width: 270px;
-
-        a {
-          height: 180px;
-        }
-      }
-      .item-3 {
-        left: 10px;
-        top: 420px;
-        width: 320px;
-
-        a {
-          height: 180px;
-        }
-      }
-      .item-4 {
-        left: 60px;
-        top: 620px;
-        width: 370px;
-
-        a {
-          height: 200px;
-        }
-      }
-      .item-5 {
-        left: 350px;
-        top: 420px;
-        width: 360px;
-
-        a {
-          height: 180px;
-        }
-      }
-      .item-6 {
-        left: 450px;
-        top: 620px;
-        width: 260px;
-
-        a {
-          height: 200px;
-        }
-      }
-    }
-  }
-
-  @include mediumScreen {
-    .ctn {
-      height: 860px;
-    }
-    &__header {
-      width: 390px;
-      top: 330px;
-      left: 10px;
-    }
-
-    &__list {
-      .item-1 {
-        left: 130px;
-        top: -60px;
-        width: 530px;
-
-        a {
-          height: 280px;
-        }
-      }
-      .item-2 {
-        left: 420px;
-        top: 240px;
-        width: 240px;
-
-        a {
-          height: 230px;
-        }
-      }
-      .item-3 {
-        left: 680px;
-        top: 140px;
-        width: 290px;
-
-        a {
-          height: 330px;
-        }
-      }
-      .item-4 {
-        left: 590px;
-        top: 490px;
-        width: 380px;
-
-        a {
-          height: 220px;
-        }
-      }
-      .item-5 {
-        left: 350px;
-        top: 490px;
-        width: 220px;
-
-        a {
-          height: 260px;
-        }
-      }
-      .item-6 {
-        left: 10px;
-        top: 490px;
-        width: 320px;
-
-        a {
-          height: 260px;
-        }
-      }
-    }
-  }
-
-  @include largeScreen {
-    .ctn {
-      height: 920px;
-    }
-    &__header {
-      width: 390px;
-      top: 330px;
-      left: 15px;
-    }
-
-    &__list {
-      .item-1 {
-        left: 145px;
-        top: -60px;
-        width: 630px;
-
-        a {
-          height: 320px;
-        }
-      }
-      .item-2 {
-        left: 535px;
-        top: 280px;
-        width: 240px;
-
-        a {
-          height: 230px;
-        }
-      }
-      .item-3 {
-        left: 795px;
-        top: 140px;
-        width: 370px;
-
-        a {
-          height: 370px;
-        }
-      }
-      .item-4 {
-        left: 665px;
-        top: 530px;
-        width: 500px;
-
-        a {
-          height: 250px;
-        }
-      }
-      .item-5 {
-        left: 405px;
-        top: 530px;
-        width: 240px;
-
-        a {
-          height: 310px;
-        }
-      }
-      .item-6 {
-        left: 15px;
-        top: 530px;
-        width: 370px;
-
-        a {
-          height: 310px;
         }
       }
     }
   }
 
   @include extraScreen {
-    .ctn {
-      height: 920px;
+    height: 1730px;
+    &__list ul li {
+      &.item-1 a {
+        left: 440px;
+        top: -72px;
+        width: 578px;
+
+        .overlay {
+          top: 70px;
+          left: 0;
+        }
+      }
+      &.item-2 a {
+        left: 582px;
+        top: 255px;
+        width: 365px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
+      &.item-3 a {
+        left: 947px;
+        top: 255px;
+        width: 367px;
+
+        .overlay {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.item-4 a {
+        left: 254px;
+        top: 617px;
+        width: 693px;
+
+        .overlay {
+          top: 0;
+          left: 149px;
+        }
+      }
+      &.item-5 a {
+        left: 947px;
+        top: 662px;
+        width: 365px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
+      &.item-6 a {
+        left: 582px;
+        top: 942px;
+        width: 365px;
+
+        .overlay {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.item-7 a {
+        left: 947px;
+        top: 1025px;
+        width: 549px;
+
+        .overlay {
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &.item-8 a {
+        left: 440px;
+        top: 1347px;
+        width: 580px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
     }
     &__header {
-      width: 390px;
-      top: 330px;
-      left: 270px;
+      top: 305px;
+      left: 150px;
+      width: 400px;
+
+      h2 {
+        font-weight: 100;
+        font-size: 54px;
+        line-height: 1;
+        margin: 0;
+        color: #6d6d6d;
+      }
+
+      p {
+        padding-top: 20px;
+        font-size: 15px;
+        line-height: 23.5px;
+        color: #6c6c6c;
+      }
+    }
+    &__footer {
+      line-height: 39.1px;
+      font-size: 20px;
+      font-weight: 100;
+      color: #6d6d6d;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      top: 1360px;
+      left: 1077px;
+      width: 415px;
+
+      span {
+        display: block;
+        padding-left: 20px;
+        padding-top: 39px;
+      }
     }
 
-    &__list {
-      .item-1 {
-        left: 400px;
-        top: -60px;
-        width: 630px;
+    .govnoshadows {
+      .govnoshadow_1 {
+        width: 180px;
+        height: 160px;
+        top: 0;
+        left: 260px;
+      }
+      .govnoshadow_2 {
+        width: 540px;
+        height: 356px;
+        top: 60px;
+        left: 1131px;
+      }
+      .govnoshadow_3 {
+        width: 514px;
+        height: 358px;
+        top: 1151px;
+        left: 69px;
+      }
+      .govnoshadow_4 {
+        width: 180px;
+        height: 160px;
+        top: 1513px;
+        left: 1020px;
+      }
+    }
+  }
 
-        a {
-          height: 320px;
+  @include largeScreen {
+    height: 1730px;
+
+    &__list ul li {
+      &.item-1 a {
+        left: 240px;
+        top: -72px;
+        width: 578px;
+
+        .overlay {
+          top: 70px;
+          left: 0;
         }
       }
-      .item-2 {
-        left: 790px;
-        top: 280px;
-        width: 240px;
+      &.item-2 a {
+        left: 382px;
+        top: 255px;
+        width: 365px;
 
-        a {
-          height: 230px;
+        .overlay {
+          top: 0;
+          left: 0;
         }
       }
-      .item-3 {
-        left: 1050px;
-        top: 140px;
-        width: 370px;
+      &.item-3 a {
+        left: 747px;
+        top: 255px;
+        width: 367px;
 
-        a {
-          height: 370px;
+        .overlay {
+          top: 0;
+          right: 0;
         }
       }
-      .item-4 {
-        left: 920px;
-        top: 530px;
-        width: 500px;
+      &.item-4 a {
+        left: 54px;
+        top: 617px;
+        width: 693px;
 
-        a {
-          height: 250px;
+        .overlay {
+          top: 0;
+          left: 149px;
         }
       }
-      .item-5 {
-        left: 660px;
-        top: 530px;
-        width: 240px;
+      &.item-5 a {
+        left: 747px;
+        top: 662px;
+        width: 365px;
 
-        a {
-          height: 310px;
+        .overlay {
+          top: 0;
+          left: 0;
         }
       }
-      .item-6 {
-        left: 270px;
-        top: 530px;
-        width: 370px;
+      &.item-6 a {
+        left: 258px;
+        top: 942px;
+        width: 365px;
+
+        .overlay {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.item-7 a {
+        left: 623px;
+        top: 1025px;
+        width: 549px;
+
+        .overlay {
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &.item-8 a {
+        left: 140px;
+        top: 1347px;
+        width: 580px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    &__header {
+      top: 305px;
+      left: 10px;
+      width: 400px;
+
+      h2 {
+        font-weight: 100;
+        font-size: 54px;
+        line-height: 1;
+        margin: 0;
+        color: #6d6d6d;
+      }
+
+      p {
+        padding-top: 20px;
+        font-size: 15px;
+        line-height: 23.5px;
+        color: #6c6c6c;
+      }
+    }
+    &__footer {
+      line-height: 39.1px;
+      font-size: 20px;
+      font-weight: 100;
+      color: #6d6d6d;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      top: 1360px;
+      left: 757px;
+      width: 415px;
+
+      span {
+        display: block;
+        padding-left: 20px;
+        padding-top: 39px;
+      }
+    }
+
+    .govnoshadows {
+      .govnoshadow_1 {
+        width: 180px;
+        height: 160px;
+        top: 0;
+        left: 260px;
+      }
+      .govnoshadow_2 {
+        width: 540px;
+        height: 356px;
+        top: 60px;
+        left: 1131px;
+      }
+      .govnoshadow_3 {
+        width: 514px;
+        height: 358px;
+        top: 1151px;
+        left: 69px;
+      }
+      .govnoshadow_4 {
+        width: 180px;
+        height: 160px;
+        top: 1513px;
+        left: 1020px;
+      }
+    }
+  }
+
+  @include mediumScreen {
+    height: 1790px;
+
+    &__list ul li {
+      &.item-1 a {
+        left: 240px;
+        top: -72px;
+        width: 578px;
+
+        .overlay {
+          top: 70px;
+          left: 0;
+        }
+      }
+      &.item-2 a {
+        left: 395px;
+        top: 255px;
+        width: 365px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
+      &.item-3 a {
+        left: 0;
+        top: 617px;
+        width: 280px;
+
+        .overlay {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.item-4 a {
+        left: 280px;
+        top: 617px;
+        width: 661px;
+
+        .overlay {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.item-5 a {
+        left: 96px;
+        top: 926px;
+        width: 365px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
+      &.item-6 a {
+        left: 461px;
+        top: 927px;
+        width: 480px;
+
+        .overlay {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.item-7 a {
+        left: 10px;
+        top: 1289px;
+        width: 451px;
+
+        .overlay {
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &.item-8 a {
+        left: 461px;
+        top: 1458px;
+        width: 481px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    &__header {
+      top: 305px;
+      left: 10px;
+      width: 400px;
+
+      h2 {
+        font-weight: 100;
+        font-size: 54px;
+        line-height: 1;
+        margin: 0;
+        color: #6d6d6d;
+      }
+
+      p {
+        padding-top: 20px;
+        font-size: 15px;
+        line-height: 23.5px;
+        color: #6c6c6c;
+      }
+    }
+    &__footer {
+      line-height: 39.1px;
+      font-size: 20px;
+      font-weight: 100;
+      color: #6d6d6d;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      top: 1540px;
+      left: 10px;
+      width: 415px;
+
+      span {
+        display: block;
+        padding-left: 20px;
+        padding-top: 39px;
+      }
+    }
+
+    .govnoshadows {
+      display: none;
+    }
+  }
+
+  @include tabletScreenDown {
+    padding-bottom: 40px;
+
+    &__header,
+    &__footer {
+      position: static;
+    }
+
+    &__list ul {
+      columns: 2;
+      font-size: 0;
+      column-gap: 0;
+
+      li {
+        display: inline-block;
 
         a {
-          height: 310px;
+          width: 100%;
+          position: relative;
+          top: 0;
+          left: 0;
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          .image {
+            min-height: 220px;
+            object-fit: cover;
+          }
         }
+      }
+    }
+    /*&__list ul li {
+      a {
+        position: static;
+      }
+      &.item-1 a {
+        left: 240px;
+        top: -72px;
+        width: 578px;
+
+        .overlay {
+          top: 70px;
+          left: 0;
+        }
+      }
+      &.item-2 a {
+        left: 395px;
+        top: 255px;
+        width: 365px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
+      &.item-3 a {
+        left: 0;
+        top: 617px;
+        width: 280px;
+
+        .overlay {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.item-4 a {
+        left: 280px;
+        top: 617px;
+        width: 661px;
+
+        .overlay {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.item-5 a {
+        left: 96px;
+        top: 926px;
+        width: 365px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
+      &.item-6 a {
+        left: 461px;
+        top: 927px;
+        width: 480px;
+
+        .overlay {
+          top: 0;
+          right: 0;
+        }
+      }
+      &.item-7 a {
+        left: 10px;
+        top: 1289px;
+        width: 451px;
+
+        .overlay {
+          bottom: 0;
+          left: 0;
+        }
+      }
+      &.item-8 a {
+        left: 461px;
+        top: 1458px;
+        width: 481px;
+
+        .overlay {
+          top: 0;
+          left: 0;
+        }
+      }
+    }*/
+    &__header {
+      top: 305px;
+      left: 10px;
+      width: 400px;
+
+      h2 {
+        font-weight: 100;
+        font-size: 54px;
+        line-height: 1;
+        margin: 0;
+        color: #6d6d6d;
+      }
+
+      p {
+        padding-top: 20px;
+        font-size: 15px;
+        line-height: 23.5px;
+        color: #6c6c6c;
+      }
+    }
+    &__footer {
+      line-height: 39.1px;
+      font-size: 20px;
+      font-weight: 100;
+      color: #6d6d6d;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      width: 415px;
+      margin: 20px auto 0;
+
+      span {
+        display: block;
+        padding-left: 20px;
+        padding-top: 39px;
+      }
+    }
+
+    &__header {
+      padding-top: 40px;
+      width: 100%;
+      text-align: center;
+
+      h2 {
+        margin: 0;
+      }
+    }
+
+    .govnoshadows {
+      display: none;
+    }
+  }
+
+  @include smallScreenDown {
+    &__header {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        padding: 0;
+      }
+    }
+
+    &__list ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        flex: none;
+        display: block;
+        width: 50%;
+      }
+    }
+
+    &__list ul li a {
+      font-size: 18px;
+      .overlay {
+        width: 100%;
+        height: 100%;
+      }
+
+      .image {
+        height: 220px;
+      }
+    }
+
+    &__footer {
+      line-height: 20px;
+      font-size: 13px;
+      font-weight: 100;
+      width: 100%;
+      span {
+        padding-top: 0;
       }
     }
   }
