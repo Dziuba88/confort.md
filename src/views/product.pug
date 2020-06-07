@@ -280,7 +280,7 @@ block PAGE
       .widget3D__header
         +icon('#preview', 'icon first')
         span.text 3D view
-      img.widget3D__canvas(src="tmp/product_1.jpg", alt="")
+      #widget3D.widget3D__canvas
       .widget3D__footer
         // toggle class active if option enabled
         button.btn.dark__outline(data-toggle="autoplay") autoplay
@@ -291,11 +291,17 @@ block PAGE
           .label colors
           .param__container
             .param__item
-              input#modal_color_1(type="radio", name="modal_color", data-color="0" checked)
+              input#modal_color_1(type="radio", name="modal_color", data-color="3d.lo/color_base.png" checked)
               label(for="modal_color_1"): img(src="tmp/color_1.jpg", alt="")
             .param__item
-              input#modal_color_2(type="radio", name="modal_color", data-color="1")
+              input#modal_color_2(type="radio", name="modal_color", data-color="3d.lo/color_base1.png")
               label(for="modal_color_2"): img(src="tmp/color_2.jpg", alt="")
+            .param__item
+              input#modal_color_3(type="radio", name="modal_color", data-color="3d.lo/color_base2.png")
+              label(for="modal_color_3"): img(src="tmp/color_2.jpg", alt="")
+            .param__item
+              input#modal_color_4(type="radio", name="modal_color", data-color="3d.lo/color_base3.png")
+              label(for="modal_color_4"): img(src="tmp/color_2.jpg", alt="")
         .param
           .label sidewalls
           .param__container

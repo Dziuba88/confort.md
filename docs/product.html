@@ -548,7 +548,8 @@
             <svg class="icon first">
               <use xlink:href="assets/img/sprite.svg?#preview"></use>
             </svg><span class="text">3D view</span>
-          </div><img class="widget3D__canvas" src="tmp/product_1.jpg" alt=""/>
+          </div>
+          <div class="widget3D__canvas" id="widget3D"></div>
           <div class="widget3D__footer">
             <!-- toggle class active if option enabled-->
             <button class="btn dark__outline" data-toggle="autoplay">autoplay</button>
@@ -561,12 +562,20 @@
               <div class="label">colors</div>
               <div class="param__container">
                 <div class="param__item">
-                  <input id="modal_color_1" type="radio" name="modal_color" data-color="0" checked="checked"/>
+                  <input id="modal_color_1" type="radio" name="modal_color" data-color="3d.lo/color_base.png" checked="checked"/>
                   <label for="modal_color_1"><img src="tmp/color_1.jpg" alt=""/></label>
                 </div>
                 <div class="param__item">
-                  <input id="modal_color_2" type="radio" name="modal_color" data-color="1"/>
+                  <input id="modal_color_2" type="radio" name="modal_color" data-color="3d.lo/color_base1.png"/>
                   <label for="modal_color_2"><img src="tmp/color_2.jpg" alt=""/></label>
+                </div>
+                <div class="param__item">
+                  <input id="modal_color_3" type="radio" name="modal_color" data-color="3d.lo/color_base2.png"/>
+                  <label for="modal_color_3"><img src="tmp/color_2.jpg" alt=""/></label>
+                </div>
+                <div class="param__item">
+                  <input id="modal_color_4" type="radio" name="modal_color" data-color="3d.lo/color_base3.png"/>
+                  <label for="modal_color_4"><img src="tmp/color_2.jpg" alt=""/></label>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 // GLOBALS
+
 var navText = [
   '<svg class="icon"><use xlink:href="assets/img/sprite.svg?#prev"></use></svg>',
   '<svg class="icon"><use xlink:href="assets/img/sprite.svg?#next"></use></svg>',
@@ -621,6 +622,168 @@ $(document).ready(function () {
       });
     }
 
+    function init3D() {
+      var widget = document.querySelector('#widget3D');
+      var container;
+
+      var stats, controls;
+
+      var camera, scene, renderer;
+
+      var mouseX = 0,
+        mouseY = 0;
+
+      var windowHalfX = window.innerWidth / 2;
+      var windowHalfY = window.innerHeight / 2;
+
+      var object;
+
+      var isPlay = false;
+
+      init();
+      animate();
+
+      var animateButton = document.querySelector('[data-toggle="autoplay"]');
+      animateButton.onclick = function () {
+        if (!isPlay) {
+          this.classList.add('active');
+          animate();
+        } else {
+          this.classList.remove('active');
+          animate();
+        }
+
+        isPlay = !isPlay;
+      };
+
+      function init() {
+        container = widget;
+        camera = new THREE.PerspectiveCamera(
+          45,
+          widget.offsetWidth / widget.offsetHeight,
+          2,
+          1000
+        );
+        camera.position.z = 0;
+        camera.position.x = 0;
+        camera.position.y = 0;
+
+        // scene
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xe2e2e2);
+        var ambientLight = new THREE.AmbientLight(0xececec, 0.7);
+        scene.add(ambientLight);
+        var pointLight = new THREE.PointLight(0xececec, 0.4);
+        camera.add(pointLight);
+        scene.add(camera);
+
+        // manager
+        function loadModel() {
+          object.traverse(function (child) {
+            if (child.isMesh) child.material.map = texture;
+          });
+          object.position.y = -60;
+          scene.add(object);
+        }
+
+        var manager = new THREE.LoadingManager(loadModel);
+
+        manager.onProgress = function (item, loaded, total) {
+          //console.log(item, loaded, total);
+        };
+
+        // texture
+        var textureLoader = new THREE.TextureLoader(manager);
+        var texture = textureLoader.load('3d.lo/color_base.png');
+        function materialLoad(material) {
+          texture = textureLoader.load(material);
+          return texture;
+        }
+        var colors = document.querySelectorAll('[data-color]');
+        for (var i = 0; i < colors.length; i++) {
+          var checkbox = colors[i];
+          checkbox.onchange = function () {
+            if (this.checked) {
+              var material = this.dataset.color;
+              materialLoad(material);
+            }
+          };
+        }
+
+        // model
+        function onProgress(xhr) {
+          if (xhr.lengthComputable) {
+            var percentComplete = (xhr.loaded / xhr.total) * 100;
+            console.log(
+              'model ' + Math.round(percentComplete, 2) + '% downloaded'
+            );
+          }
+        }
+        function onError() {}
+        var loader = new THREE.OBJLoader(manager);
+        loader.load(
+          '3d.lo/model.obj',
+          function (obj) {
+            object = obj;
+          },
+          onProgress,
+          onError
+        );
+
+        //
+
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(widget.offsetWidth, widget.offsetHeight);
+        container.appendChild(renderer.domElement);
+
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableZoom = true;
+        controls.autoRotate = true;
+        controls.zoomSpeed = 5;
+        controls.minDistance = 0;
+        controls.maxDistance = 1000;
+        controls.minPolarAngle = 0;
+        controls.maxPolarAngle = 1.65;
+        controls.target.set(0, 2, 0);
+        controls.update();
+
+        document.addEventListener('mousemove', onDocumentMouseMove, false);
+        window.addEventListener('resize', onWindowResize, false);
+      }
+
+      function onWindowResize() {
+        camera.aspect = widget.offsetWidth / widget.offsetHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(widget.offsetWidth, widget.offsetHeight);
+      }
+
+      function onDocumentMouseMove(event) {
+        mouseX = (event.clientX - windowHalfX) / 2;
+        mouseY = (event.clientY - windowHalfY) / 2;
+      }
+
+      function animate() {
+        requestAnimationFrame(animate);
+        var time = 0;
+        if (!isPlay) {
+          time = 0;
+        } else {
+          time = -performance.now() * 0.0003;
+        }
+        camera.position.x = 400 * Math.cos(time);
+        camera.position.z = 400 * Math.sin(time);
+        camera.lookAt(scene.position);
+        renderer.render(scene, camera);
+      }
+
+      function render() {
+        camera.lookAt(scene.position);
+        renderer.render(scene, camera);
+      }
+    }
+
     $('[data-show="modal"]').magnificPopup({
       type: 'inline',
       fixedBgPos: true,
@@ -629,6 +792,7 @@ $(document).ready(function () {
       callbacks: {
         open: function () {
           createModalParams();
+          init3D();
         },
         close: function () {
           var $wraper = $('.widget3D__product__params .param');
@@ -636,6 +800,8 @@ $(document).ready(function () {
           $wraper.removeClass('large');
           $list.removeClass('owl-carousel');
           $list.trigger('destroy.owl.carousel');
+
+          $('#widget3D').empty();
         },
       },
     });

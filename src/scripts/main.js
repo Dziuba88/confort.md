@@ -10,3 +10,6 @@
 // @prepros-prepend lib/drag.js
 // @prepros-prepend lib/range.js
 // @prepros-prepend lib/smartphoto.js
+// @prepros-prepend lib/three.js
+// @prepros-prepend three/loaders/OBJLoader.js;
+// @prepros-prepend three/controls/OrbitControls.js;
